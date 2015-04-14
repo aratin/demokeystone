@@ -53,8 +53,6 @@ var routes = {
 
 exports = module.exports = function(app) {
 	
-	// Views
-	
 	
 	
 	// Views
@@ -63,6 +61,8 @@ exports = module.exports = function(app) {
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
+	app.all('/offering', routes.views.offering);
+	
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
