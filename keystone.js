@@ -20,7 +20,7 @@ keystone.init({
 	'view engine': 'jade',
 	
 	'auto update': true,
-	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/keystone-demo',
+	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://shridhar.malagi@clariontechnologies.co.in:Clarion~1@ds047911.mongolab.com:47911/heroku_app34312707',
 	
 	'session': true,
 	'auth': true,
