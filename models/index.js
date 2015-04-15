@@ -19,3 +19,4 @@ require('./softwareproduct');
 require('./listingmenu');
 require('./consultingservice');
 require('./msp');
+require('./specializedanalyse');
