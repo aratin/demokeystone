@@ -16,8 +16,8 @@ keystone.pre('routes', function(req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Company info', key: 'company', href: '/#' },
 		{ label: 'Offering', key: 'offering', href: '/offering' },
-		// { label: 'Contact Us', key: 'contact', href: '/#' },
-		{ label: 'Sign In', key: 'signin', href: '/keystone/signin' }
+		{ label: 'Contact Us', key: 'contact', href: '/#' },
+		//{ label: 'Sign In', key: 'signin', href: '/keystone/signin' }
 	];
 	
 	res.locals.user = req.user;
