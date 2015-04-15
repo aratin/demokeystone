@@ -3,7 +3,7 @@ var Companyprofile = keystone.list('Companyprofile');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-//var CompanyInfoListMenu = keystone.list('CompanyInfoListMenu');
+var CompanyInfoListMenu = keystone.list('CompanyInfoListMenu');
 //var Message = keystone.list('Message');
 
 exports = module.exports = function(req, res) {
@@ -51,13 +51,13 @@ exports = module.exports = function(req, res) {
 	});
 
 	// Load the current CompanyInfoListMenu
-	// view.on('init', function(next) {
-	// 	var q = CompanyInfoListMenu.model.find();
-	// 	q.exec(function(err, results) {
-	// 		locals.data.companyinfolistmenus = results;
-	// 		next(err);
-	// 	});
-	// });
+	view.on('init', function(next) {
+		var q = CompanyInfoListMenu.model.find();
+		q.exec(function(err, results) {
+			locals.data.companyinfolistmenus = results;
+			next(err);
+		});
+	});
 
 	// // Load the current Message
 	// view.on('init', function(next) {
