@@ -70,7 +70,8 @@ exports = module.exports = function(app) {
 	app.get('/listingmenu',routes.views.listingmenu);
 	app.get('/consultingservice', routes.views.consultingservice);
 	app.get('/msp',routes.views.msp);
-
+	app.get('/specializedanalyse',routes.views.specializedanalyse);
+	
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	
