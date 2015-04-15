@@ -66,7 +66,8 @@ exports = module.exports = function(app) {
 	app.all('/differentiator', routes.views.differentiator);
 	app.all('/career', routes.views.career);
 	app.all('/partner', routes.views.partner);
-
+	app.get('/softwareproduct', routes.views.softwareproduct);
+	app.get('/listingmenu',routes.views.listingmenu);
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	

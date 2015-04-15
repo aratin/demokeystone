@@ -15,3 +15,5 @@ require('./mangementteam');
 require('./differentiator');
 require('./career');
 require('./partner');
+require('./softwareproduct');
+require('./listingmenu');
