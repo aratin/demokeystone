@@ -1,0 +1,56 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-4
+                  if data.careers.length
+                    .msp-images
+                      if data.careers[0].careerImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.careers[0]._.careerImage.limit(900,600),rel='Career').msp-image
+                              img(src=data.careers[0]._.careerImage.limit(640,640))
+                .col-md-8
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                        li
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                        li
+                          |
+                        li
+                          a#message
+                            i.fa.fa-lg.fa-envelope
+                  p
+                    | #{data.careers[0].careerText}
+                    br
+                    br
+                    | #{data.careers[0].careerSubtext}
+                    br
+                    | #{data.careers[0].careerSubstring}
+                    br
+                    | #{data.careers[0].careerShorttext}
+                    br
+                    | #{data.careers[0].careerShortstring}
+                    br
+                    | #{data.careers[0].careerEmail}
+            include ../views/companyinfolistmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            

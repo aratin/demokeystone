@@ -1,0 +1,31 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-3
+                  img.img-responsive.img-thumbnail(src='#{data.partners[0].partnerimage}')
+                .col-md-9
+                  p
+                    | #{data.partners[0].partnertext}
+                    br
+                    br
+              .row
+                .col-md-3
+                  img.img-responsive.img-thumbnail(src='#{data.partners[0].partnersubimage}')
+                .col-md-9
+                  p
+                    | #{data.partners[0].partnersubtext}
+            include ../views/companyinfolistmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            

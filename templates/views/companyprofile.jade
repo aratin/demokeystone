@@ -1,0 +1,55 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-4
+                  if data.companyprofiles.length
+                    .msp-images
+                      if data.companyprofiles[0].companyProfileimage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.companyprofiles[0]._.companyProfileimage.limit(900,600),rel='Companyprofile').msp-image
+                              img(src=data.companyprofiles[0]._.companyProfileimage.limit(640,640))
+                .col-md-8
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                        li
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                        li
+                          |
+                        li
+                          a#message
+                            i.fa.fa-lg.fa-envelope
+                  p
+                    | #{data.companyprofiles[0].companyProfiletext}
+                  p
+                    | #{data.companyprofiles[0].companyProfilesubtext}
+                  p
+                    | #{data.companyprofiles[0].companyProfileshortstring}
+                    br
+                    | #{data.companyprofiles[0].companyProfilelongstring}
+                    br
+                    | #{data.companyprofiles[0].companyProfilesubstring}
+                    br
+                    | #{data.companyprofiles[0].companyProfilesubstringtext}
+            include ../views/companyinfolistmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            

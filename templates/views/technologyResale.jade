@@ -1,0 +1,45 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-4
+                  if data.technologyresales.length
+                    .msp-images
+                      if data.technologyresales[0].technologyResaleimage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.technologyresales[0]._.technologyResaleimage.limit(900,600),rel='Technologyresale').msp-image
+                              img(src=data.technologyresales[0]._.technologyResaleimage.limit(640,640))
+                .col-md-8
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                        li
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                        li
+                          |
+                        li
+                          a#message
+                            i.fa.fa-lg.fa-envelope
+                  p
+                    | #{data.technologyresales[0].technologyResaletext}
+            include ../views/listingmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+   

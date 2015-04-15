@@ -1,0 +1,86 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-4
+                  if data.differentiators.length
+                    .msp-images
+                      if data.differentiators[0].differentiatorImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.differentiators[0]._.differentiatorImage.limit(900,600),rel='Differentiator').msp-image
+                              img(src=data.differentiators[0]._.differentiatorImage.limit(640,640))
+                .col-md-8
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                        li
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                        li
+                          |
+                        li
+                          a(href="/message")
+                            i.fa.fa-lg.fa-envelope
+                  p
+                    | #{data.differentiators[0].differentiatorText}
+               .row
+                .col-md-4
+                 if data.differentiators.length
+                    .msp-images
+                      if data.differentiators[0].differentiatorSubImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.differentiators[0]._.differentiatorSubImage.limit(900,600),rel='Differentiator').msp-image
+                              img(src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
+                .col-md-8
+                  p
+                    | #{data.differentiators[0].differentiatorShortSubText}
+                    br
+                    | #{data.differentiators[0].differentiatorLongSubText}
+
+               .row
+                .col-md-4
+                  if data.differentiators.length
+                    .msp-images
+                      if data.differentiators[0].differentiatorSubStringImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.differentiators[0]._.differentiatorSubStringImage.limit(900,600),rel='Differentiator').msp-image
+                              img(src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
+                .col-md-8
+                  p
+                    | #{data.differentiators[0].differentiatorShortStringText}
+                    br
+                    | #{data.differentiators[0].differentiatorLongStringText}
+               .row
+                .col-md-4
+                  if data.differentiators.length
+                    .msp-images
+                      if data.differentiators[0].differentiatorSubtextImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.differentiators[0]._.differentiatorSubtextImage.limit(900,600),rel='Differentiator').msp-image
+                              img(src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
+                .col-md-8
+                  p
+                    | #{data.differentiators[0].differentiatorTextLong}
+            include ../views/companyinfolistmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            

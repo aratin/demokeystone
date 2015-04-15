@@ -1,0 +1,45 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                .col-md-4
+                 if data.specializedanalyses.length
+                    .msp-images
+                      if data.specializedanalyses[0].specialiseimage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.specializedanalyses[0]._.specialiseimage.limit(900,600),rel='Specializedanalyse').msp-image
+                              img(src=data.specializedanalyses[0]._.specialiseimage.limit(640,640))
+                .col-md-8
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                        li
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                        li
+                          |
+                        li
+                          a#message
+                            i.fa.fa-lg.fa-envelope
+                  p
+                    | #{data.specializedanalyses[0].specialiseAnyalisetext}
+            include ../views/listingmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            

@@ -93,10 +93,7 @@ exports = module.exports = function(req, res) {
 		});
 		
 	});
-	
-	
-	
-	
+
 	// Delete a Comment
 	view.on('get', { remove: 'comment' }, function(next) {
 		
