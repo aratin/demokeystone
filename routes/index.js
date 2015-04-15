@@ -61,7 +61,7 @@ exports = module.exports = function(app) {
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 	// app.all('/offering', routes.views.offering);
-	app.all('/homepage', routes.views.homepage);
+	//app.all('/homepage', routes.views.homepage);
 	// app.all('/companyprofile', routes.views.companyprofile);
 	// app.all('/mangementteam', routes.views.mangementteam);
 	// app.all('/differentiator', routes.views.differentiator);
@@ -73,11 +73,11 @@ exports = module.exports = function(app) {
 	// app.get('/msp',routes.views.msp);
 	// app.get('/specializedanalyse',routes.views.specializedanalyse);
 	// app.get('/technologyresale', routes.views.technologyResale);
-	app.get('/navbar', routes.views.navbar);
-	app.get('/menu',routes.views.menu);
+	//app.get('/navbar', routes.views.navbar);
+	//app.get('/menu',routes.views.menu);
 	// app.get('/listingmenu',routes.views.listingmenu);
 	// app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
-    app.get('/footer',routes.views.footer);
+    //app.get('/footer',routes.views.footer);
 	// app.get('/message',routes.views.message);
 	
 	// Downloads
