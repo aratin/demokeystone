@@ -1,0 +1,37 @@
+extends ../layouts/default
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      #inner-banner
+      #inner-content-box#content-box
+        .container
+          #offerings.row
+            .col-md-9
+              .row
+                if enquirySubmitted
+                  h3 Thanks for getting in touch.
+                else
+                  form(method='post')
+                    input(type='hidden', name='action', value='contact')
+                     .form-group(class=validationErrors.name ? 'has-error' : null)
+                    label Name
+                    input(type='text', name='name.full', value=formData['name.full'], required).form-control
+                     .form-group(class=validationErrors.email ? 'has-error' : null)
+                    label Email
+                    input(type='email', name='email', value=formData.email, required).form-control
+                     .form-group
+                    label Message Subject
+                    input(type='text', name='messagesubject', value=formData.messagesubject, required).form-control
+                     .form-group
+                    label Enter your Message
+                    textarea(name='messagetext',rows=4).form-control= formData.messagetext
+                    br
+                    button(type='submit').btn.btn-primary Send
+            include ../views/companyinfolistmenu
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            
