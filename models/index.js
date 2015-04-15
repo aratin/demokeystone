@@ -12,4 +12,3 @@ require('./footer');
 require('./companyprofile');
 require('./companyinfolistmenu');
 require('./mangementteam');
-//require('./differentiator');
