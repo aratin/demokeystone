@@ -18,3 +18,4 @@ require('./partner');
 require('./softwareproduct');
 require('./listingmenu');
 require('./consultingservice');
+require('./msp');
