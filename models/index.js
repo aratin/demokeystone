@@ -17,3 +17,4 @@ require('./career');
 require('./partner');
 require('./softwareproduct');
 require('./listingmenu');
+require('./consultingservice');

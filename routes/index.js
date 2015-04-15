@@ -68,6 +68,7 @@ exports = module.exports = function(app) {
 	app.all('/partner', routes.views.partner);
 	app.get('/softwareproduct', routes.views.softwareproduct);
 	app.get('/listingmenu',routes.views.listingmenu);
+	app.get('/consultingservice', routes.views.consultingservice);
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	
