@@ -60,25 +60,6 @@ exports = module.exports = function(app) {
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
-	// app.all('/offering', routes.views.offering);
-	app.all('/homepage', routes.views.homepage);
-	// app.all('/companyprofile', routes.views.companyprofile);
-	// app.all('/mangementteam', routes.views.mangementteam);
-	// app.all('/differentiator', routes.views.differentiator);
-	// app.all('/career', routes.views.career);
-	// app.all('/contactlist', routes.views.contactlist);
-	// app.all('/partner', routes.views.partner);
-	// app.get('/softwareproduct', routes.views.softwareproduct);
-	// app.get('/consultingservice', routes.views.consultingservice);
-	// app.get('/msp',routes.views.msp);
-	// app.get('/specializedanalyse',routes.views.specializedanalyse);
-	// app.get('/technologyresale', routes.views.technologyResale);
-	// app.get('/navbar', routes.views.navbar);
-	// app.get('/menu',routes.views.menu);
-	// app.get('/listingmenu',routes.views.listingmenu);
-	// app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
- //    app.get('/footer',routes.views.footer);
-	// app.get('/message',routes.views.message);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
