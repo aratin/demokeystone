@@ -10,3 +10,4 @@ require('./navbar');
 require('./menu');
 require('./footer');
 require('./companyprofile');
+require('./companyinfolistmenu');
