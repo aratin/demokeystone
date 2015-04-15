@@ -71,7 +71,7 @@ exports = module.exports = function(app) {
 	app.get('/consultingservice', routes.views.consultingservice);
 	app.get('/msp',routes.views.msp);
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
-	
+	app.get('/technologyresale', routes.views.technologyResale);
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	
