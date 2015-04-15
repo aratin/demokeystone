@@ -60,6 +60,7 @@ exports = module.exports = function(app) {
 	app.all('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
+	app.all('/companyprofile', routes.views.companyprofile);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
