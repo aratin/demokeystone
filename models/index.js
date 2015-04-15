@@ -13,3 +13,4 @@ require('./companyprofile');
 require('./companyinfolistmenu');
 require('./mangementteam');
 require('./differentiator');
+require('./career');
