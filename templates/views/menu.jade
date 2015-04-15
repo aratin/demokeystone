@@ -1,0 +1,47 @@
+#top-navbar.navbar.navbar-inverse
+  .container
+    div
+      .click-menu
+        |Menu
+        img(src="../images/menu-icon-left.png", style="float: right; position: relative; top: 12px;")
+      ul.nav.navbar-nav.nav-click#menu
+        li#home
+          a(href="/") #{data.menus[0].homeNavbar}
+        li.dropdown#CompanyInfo
+          a(href="/companyprofile") #{data.menus[0].companyInfoNavbar}
+            span.caret
+          ul.dropdown-menu.outer-menu(role="menu")
+            li
+              a(href="/companyprofile") #{data.menus[0].companyProfileMenu}
+            li
+              a(href="/mangementteam")
+                | #{data.menus[0].mangementTeamMenu}
+            li
+              a(href="/differentiator") #{data.menus[0].differentiatorsMenu}
+            li
+              a(href="/career") #{data.menus[0].careersMenu}
+            li
+              a(href="/contactlist") #{data.menus[0].contactusMenu}
+            li
+              a(href="/partner") #{data.menus[0].partnersMenu}
+        li.dropdown#offering
+          a(href="/offering")
+            | #{data.menus[0].offeringNavbar}
+            span.caret
+          ul.dropdown-menu.outer-menu(role="menu")
+            li
+              a(href="/softwareproduct") #{data.menus[0].softwareProductMenu}
+            li
+              a(href="/consultingservice")
+                | #{data.menus[0].consultingMenu}
+            li
+              a(href="/msp") #{data.menus[0].mspMenu}
+            li
+              a(href="/specializedanalyse") #{data.menus[0].specializedMenu}
+            li
+              a(href="/technologyresale") #{data.menus[0].technologyMenu}
+        li#contactlist
+          a(href="/contactlist") #{data.menus[0].contactusNavbar}
+        li#signin
+          a(href="/keystone/signin") #{data.menus[0].signInNavbar}
+      .clearfix

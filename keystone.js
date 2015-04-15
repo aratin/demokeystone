@@ -6,10 +6,10 @@ var keystone = require('keystone');
 /**
  * Application Initialisation
  */
-
+console.log("keystone.js started");
 keystone.init({
 	
-	'name': 'Keystone Demo',
+	'name': 'Visual intelligence',
 	'brand': 'Demo',
 	
 	'favicon': 'public/favicon.ico',
@@ -50,6 +50,22 @@ keystone.set('locals', {
 
 keystone.set('routes', require('./routes'));
 
+keystone.set('cloudinary config', { cloud_name: 'clarion', api_key: '958126136135894', api_secret: 'hwf2l0DwEJaDtMZyEi7BTF34U58' });
+// or
+keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
+ 
+// optional, will prefix all built-in tags with 'keystone_'
+keystone.set('cloudinary prefix', 'keystone');
+ 
+// optional, will prefix each image public_id with [{prefix}]/{list.path}/{field.path}/
+keystone.set('cloudinary folders', true);
+ 
+// optional, will force cloudinary to serve images over https
+keystone.set('cloudinary secure', true);
+
+keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
+keystone.set('mandrill username', 'arati.nankar@planetria.com');
+
 keystone.set('nav', {
 	'posts': ['posts', 'post-comments', 'post-categories'],
 	'galleries': 'galleries',
@@ -57,5 +73,6 @@ keystone.set('nav', {
 	'users': 'users',
 	'field-tests': 'things'
 });
+
 
 keystone.start();

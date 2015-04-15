@@ -1,92 +1,128 @@
 extends ../layouts/default
-
-block css
-	style.
-		.site-header .logo {
-			opacity: 0;
-			animation: apparate 2s 1s;
-			-webkit-animation: apparate 2s 1s;
-		}
-
+//-extends /views/navbar
 block content
-	.fancy-border-bottom.text-center
-		h1 Let's get started
-		.lead This site demonstrates common patterns in <a href='http://keystonejs.com', target='_blank'>Keystone</a>. Below are a handful of use cases to cut your teeth on.
-		.buttons
-			a(href='http://github.com/JedWatson/keystone-demo', target='_blank', title='View on GitHub').btn.btn-primary View on GitHub
-			a(href='http://www.keystonejs.com/guide', target='_blank', title='KeystoneJS Documentation').btn.btn-link Read the Docs
-
-	.row.cards
-		.col-sm-6
-			.card.card--secondary: a(href='/blog')
-				span.entypo.entypo-docs.card__icon
-				.card__body
-					h3.card__title Blog
-					//- p Simple example blog with posts and categories.
-					p Posts have a slug automatically generated from their title, and support short and extended versions of the content.
-					p You can sign in using the demo account to contribute to the blog.
-					.card__button Check it out
-			.card.card--tertiary: a(href='/keystone/signin')
-				span.entypo.entypo-lock.card__icon
-				.card__body
-					h3.card__title Session Management
-					p Keystone includes session management and default sign-in and sign-out views.
-					//- p demo@keystonejs.com / demo
-					p
-						| E: demo@keystonejs.com
-						br
-						| P: demo
-					.card__button Sign in
-			.card.card--success: a(href='/contact')
-				span.entypo.entypo-mail.card__icon
-				.card__body
-					h3.card__title Enquiries
-					p Simple contact form that validates input and logs enquiries to the database.
-					p You can sign in using the demo account to view the submitted enquiries.
-					.card__button Check it out
-		.col-sm-6
-			.card.card--important: a(href='/404')
-				span.entypo.entypo-lock.card__icon
-				.card__body
-					h3.card__title Error Handling
-					p The 404 and 500 views demonstrate how to set up error handlers for your application.
-					.card__button Check it out
-			.card.card--inverse: a(href='/download/users')
-				span.entypo.entypo-cloud.card__icon
-				.card__body
-					h3.card__title Download CSV
-					p For an example of how to download a list in .csv format, see /routes/download/users.js.
-					p It uses the excellent node-csv library. 
-					.card__button Download users.csv
-			.card.card--primary: a(href='/gallery')
-				span.entypo.entypo-picture.card__icon
-				.card__body
-					h3.card__title Gallery
-					p Example of how to set up a page that displays multiple image galleries.
-					p Demonstrates usage of single and multi image fields and their resizing methods.
-					p You can sign in using the demo account to create and manage image galleries, and upload additional images
-					.card__button Check it out
-	.fancy-border-top.text-center
-		h2 What's this all about?
-		p.lead
-			a(href='http://keystonejs.com/', target='_blank') Keystone
-			|  is a 
-			a(href='http://nodejs.org/', target='_blank') Node.js
-			|  content management system and web application platform built on 
-			a(href='http://expressjs.com/') Express
-			|  and 
-			a(href='http://www.mongodb.org/', target='_blank') Mongo.
-		p.lead
-			a(href='http://github.com/JedWatson/keystone-demo', target='_blank', title='View on GitHub').btn.btn-primary View on GitHub
-			a(href='http://www.keystonejs.com/guide', target='_blank', title='KeystoneJS Documentation').btn.btn-link Read the Docs
-		p.text-muted
-			| This demo site includes the latest versions of 
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a> (currently 3.0.2) 
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a> (currently 1.10.2)
-			| so you can use it as a base to quickly start a new project. 
-
-block page-js
-	script.
-		$('.site-header').find('.logo').bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e){
-			$(this).css('opacity', '1');
-		});
+    header
+      include ../views/navbar
+      include ../views/menu
+    section
+      #banner
+        if data.homepages.length
+          .msp-images
+            if data.homepages[0].bannerPic.exists
+              .row
+                .col-xs-12
+                  a(href=data.homepages[0]._.bannerPic.limit(900,600),rel='Homepage').msp-image
+                    img(src=data.homepages[0]._.bannerPic.limit(640,640))
+      #content-box
+        .container
+          h2 #{data.homepages[0].whatweoffertitle}
+          .row
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-pie-chart
+                span
+                  | #{data.homepages[0].Analyaticalporttalstring}
+                  br
+                  | #{data.homepages[0].Integrationastring}
+                  br
+                  | #{data.homepages[0].Environmentstring}
+                .black-hover-box
+                  h4 #{data.homepages[0].Analyaticalshortstring}
+                  p
+                    | #{data.homepages[0].Analyaticallongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-database
+                span
+                  | #{data.homepages[0].TibcoSpotfireManaged}
+                  br
+                  | #{data.homepages[0].SolutionData}
+                  br
+                  | #{data.homepages[0].CenterHosting}
+                .black-hover-box
+                  h4 #{data.homepages[0].TibcoSpotshortstring}
+                  p
+                    | #{data.homepages[0].TibcoSpotlongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-group
+                span
+                  | #{data.homepages[0].MarketResearch}
+                  br
+                  | #{data.homepages[0].SocialMedia}
+                  br
+                  | #{data.homepages[0].Analytics}
+                .black-hover-box
+                  h4 #{data.homepages[0].MarketResearchshortstring}
+                  p
+                    | #{data.homepages[0].MarketResearchlongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-dot-circle-o
+                span
+                  | #{data.homepages[0].TibcoSpotfireCustom}
+                  br
+                  | #{data.homepages[0].SolutionDevelopment}
+                  br
+                  | #{data.homepages[0].Operations}
+                .black-hover-box
+                  h4 #{data.homepages[0].TibcoSpotfireCustomshortstring}
+                  p
+                    | #{data.homepages[0].TibcoSpotfireCustomlongstring}
+                  button.btn.btn-info(type="button") Learn More
+          .row
+            .col-md-6
+              h2 #{data.homepages[0].Aboutusstring}
+              p
+                | #{data.homepages[0].Aboutustextarea}
+              p
+                a.read-more(href="#") Read More &#62; &#62;
+            .col-md-6
+              h2 #{data.homepages[0].NewsAndUpdatetitle}
+              .row
+                .col-md-2
+                  if data.homepages.length
+                    .msp-images
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(900,600),rel='Homepage').msp-image
+                              img(src=data.homepages[0]._.NewsAndUpdateImage.limit(640,640))
+                .col-md-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
+                  p
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              .row
+                .col-md-2
+                  if data.homepages.length
+                    .msp-images
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(900,600),rel='Homepage').msp-image
+                              img(src=data.homepages[0]._.NewsAndUpdateImage.limit(640,640))
+                .col-md-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
+                  p
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              p
+                a.read-more(href="#") Read More &#62; &#62;
+      .container-fluid
+        .row
+          footer
+            include ../views/footer

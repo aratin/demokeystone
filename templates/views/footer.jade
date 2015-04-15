@@ -1,0 +1,62 @@
+#footer-box
+  .container
+    .row
+      //- Document List Begins
+      .col-md-5
+        h4 #{data.footers[0].Policytitle}
+        .pdf-list
+          ul
+            li
+              img(src='#{data.footers[0].Pdfimage}')
+              a(href="#") #{data.footers[0].visuallink}
+            li
+              img(src='#{data.footers[0].Pdfimage}')
+              a(href="#") #{data.footers[0].visualsublink}
+      //- Document List Ends
+      //- Footer Menu Begins
+      .col-md-4
+        h4 #{data.footers[0].OurSolutionstitle}
+        .row
+          .col-md-6
+            .footer-menu
+              ul
+                li
+                  a(href="#") #{data.footers[0].HealthcareInsurers}
+                li
+                  a(href="#") #{data.footers[0].HealthcareProviders}
+                li
+                  a(href="#") #{data.footers[0].Employers}
+                li
+                  a(href="#") #{data.footers[0].Pharmaceuticals}
+          .col-md-6
+            .footer-menu
+              ul
+                li
+                  a(href="#") #{data.footers[0].LifestyleIndustry}
+                li
+                  a(href="#") #{data.footers[0].ResearchInstitutes}
+                li
+                  a(href="#") #{data.footers[0].CRM}
+                li
+                  a(href="#") #{data.footers[0].LawEnforcement}
+      //- Footer Menu Ends
+      //- Contact Begins
+      .col-md-3
+        h4  #{data.footers[0].ContactUstitle}
+        p #{data.footers[0].VisualIntelligencefooter}
+        p
+        p #{data.footers[0].footeraddress}
+        p Email: #{data.footers[0].footeremail}
+        p
+          | #{data.footers[0].FollowUs}:
+          a(href="#")
+            img.social-icon(src='#{data.footers[0].facebookimage}')
+          a(href="#")
+            img.social-icon(src='#{data.footers[0].linkdinimage}')
+      //- Contact Ends
+//- Copyright Begins
+#copyright-box
+  .container
+    span
+      | copyright 2015 
+      a(href="#") Visual InteligenceLLC
