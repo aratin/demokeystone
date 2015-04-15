@@ -1,10 +1,10 @@
 var keystone = require('keystone');
 var Homepage = keystone.list('Homepage');
-//var Listingmenu = keystone.list('Listingmenu');
+var Listingmenu = keystone.list('Listingmenu');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-//var Message = keystone.list('Message');
+var Message = keystone.list('Message');
 
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
@@ -50,7 +50,7 @@ exports = module.exports = function(req, res) {
 	});
 
 	// Load the current ListingMenu
-	/* view.on('init', function(next) {
+	 view.on('init', function(next) {
 		var q = Listingmenu.model.find();
 		q.exec(function(err, results) {
 			locals.data.listingmenus = results;
@@ -65,7 +65,7 @@ exports = module.exports = function(req, res) {
 			locals.data.messages = results;
 			next(err);
 		});
-	}); */
+	}); 
 
 	// Render the view
 	view.render('index', {
