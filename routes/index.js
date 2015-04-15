@@ -62,6 +62,8 @@ exports = module.exports = function(app) {
 	app.all('/contact', routes.views.contact);
 	app.all('/companyprofile', routes.views.companyprofile);
 	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
+	app.all('/mangementteam', routes.views.mangementteam);
+	app.all('/differentiator', routes.views.differentiator);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
