@@ -22,3 +22,4 @@ require('./msp');
 require('./specializedanalyse');
 require('./offering');
 require('./technologyresale');
+require('./contactform');
