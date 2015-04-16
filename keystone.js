@@ -10,7 +10,7 @@ console.log("keystone.js started");
 keystone.init({
 	
 	'name': 'Visual intelligence',
-	'brand': 'Demo',
+	'brand': 'Visual intelligence',
 	
 	'favicon': 'public/favicon.ico',
 	'less': 'public',
@@ -67,10 +67,13 @@ keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
 keystone.set('mandrill username', 'arati.nankar@planetria.com');
 
 keystone.set('nav', {
-	'posts': ['posts', 'post-comments', 'post-categories'],
-	'galleries': 'galleries',
-	'enquiries': 'enquiries',
-	'users': 'users',
-	'field-tests': 'things'
+	'homepages': 'homepages',
+	'companyprofiles': 'companyprofiles',
+	'offerings': 'offerings',
+	'contactlists': 'contactlists',
+	'navbars': 'navbars',
+	'menus': 'menus',
+	'footers': 'footers'
 });
+
 keystone.start();
