@@ -17,7 +17,7 @@ keystone.pre('routes', function(req, res, next) {
 		{ label: 'Company info', key: 'company', href: '/#' },
 		{ label: 'Offering', key: 'offering', href: '/offering' },
 		{ label: 'Contact Us', key: 'contact', href: '/#' },
-		//{ label: 'Sign In', key: 'signin', href: '/keystone/signin' }
+		{ label: 'Sign In', key: 'signin', href: '/keystone/signin' }
 	];
 	
 	res.locals.user = req.user;
@@ -56,24 +56,26 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/blog/:category?', routes.views.blog);
-	app.all('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
-	app.all('/contact', routes.views.contact);
+	app.all('/offering', routes.views.offering);
+	app.all('/homepage', routes.views.homepage);
 	app.all('/companyprofile', routes.views.companyprofile);
-	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
 	app.all('/mangementteam', routes.views.mangementteam);
 	app.all('/differentiator', routes.views.differentiator);
 	app.all('/career', routes.views.career);
+	app.all('/contactlist', routes.views.contactlist);
 	app.all('/partner', routes.views.partner);
 	app.get('/softwareproduct', routes.views.softwareproduct);
-	app.get('/listingmenu',routes.views.listingmenu);
 	app.get('/consultingservice', routes.views.consultingservice);
 	app.get('/msp',routes.views.msp);
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
-	app.all('/offering', routes.views.offering);
-	app.all('/technologyresale', routes.views.technologyresale);
-	app.all('/contactform', routes.views.contactform);
+	app.get('/technologyresale', routes.views.technologyResale);
+	app.get('/navbar', routes.views.navbar);
+	app.get('/menu',routes.views.menu);
+	app.get('/listingmenu',routes.views.listingmenu);
+	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
+	app.get('/footer',routes.views.footer);
+	app.get('/message',routes.views.message);
+	
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	

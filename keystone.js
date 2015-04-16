@@ -1,76 +1,85 @@
-// Load .env for development environments
-require('dotenv')().load();
+var _ = require('underscore'),
+	keystone = require('keystone'),
+	importRoutes = keystone.importer(__dirname);
 
-var keystone = require('keystone');
+function restrictToAdmins(req, res, next) {
+	if (req.user && req.user.isAdmin) {
+		next();
+	} else {
+		res.redirect('/signin');
+	}
+}
 
-/**
- * Application Initialisation
- */
-console.log("keystone.js started");
-keystone.init({
+keystone.pre('routes', function(req, res, next) {
 	
-	'name': 'Visual intelligence',
-	'brand': 'Demo',
+	res.locals.navLinks = [
+		{ label: 'Home', key: 'home', href: '/' },
+		{ label: 'Company info', key: 'company', href: '/#' },
+		{ label: 'Offering', key: 'offering', href: '/offering' },
+		{ label: 'Contact Us', key: 'contact', href: '/#' },
+		{ label: 'Sign In', key: 'signin', href: '/keystone/signin' }
+	];
 	
-	'favicon': 'public/favicon.ico',
-	'less': 'public',
-	'static': 'public',
+	res.locals.user = req.user;
 	
-	'views': 'templates/views',
-	'view engine': 'jade',
-	
-	'auto update': true,
-	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://shridhar.malagi@clariontechnologies.co.in:Clarion~1@ds047911.mongolab.com:47911/ayush-keystone-demo',
-	
-	'session': true,
-	'auth': true,
-	'user model': 'User',
-	'cookie secret': process.env.COOKIE_SECRET || 'demo',
-	
-	'ga property': process.env.GA_PROPERTY,
-	'ga domain': process.env.GA_DOMAIN,
-	
-	'chartbeat property': process.env.CHARTBEAT_PROPERTY,
-	'chartbeat domain': process.env.CHARTBEAT_DOMAIN
+	next();
 	
 });
 
-require('./models');
-
-keystone.set('locals', {
-	_: require('underscore'),
-	env: keystone.get('env'),
-	utils: keystone.utils,
-	editable: keystone.content.editable,
-	ga_property: keystone.get('ga property'),
-	ga_domain: keystone.get('ga domain'),
-	chartbeat_property: keystone.get('chartbeat property'),
-	chartbeat_domain: keystone.get('chartbeat domain')
+keystone.pre('render', function(req, res, next) {
+	
+	var flashMessages = {
+		info: req.flash('info'),
+		success: req.flash('success'),
+		warning: req.flash('warning'),
+		error: req.flash('error')
+	};
+	
+	res.locals.messages = _.any(flashMessages, function(msgs) { return msgs.length }) ? flashMessages : false;
+	
+	next();
+	
 });
 
-keystone.set('routes', require('./routes'));
-
-keystone.set('cloudinary config', { cloud_name: 'clarion', api_key: '958126136135894', api_secret: 'hwf2l0DwEJaDtMZyEi7BTF34U58' });
-// or
-keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
- 
-// optional, will prefix all built-in tags with 'keystone_'
-keystone.set('cloudinary prefix', 'keystone');
- 
-// optional, will prefix each image public_id with [{prefix}]/{list.path}/{field.path}/
-keystone.set('cloudinary folders', true);
- 
-// optional, will force cloudinary to serve images over https
-keystone.set('cloudinary secure', true);
-
-keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
-keystone.set('mandrill username', 'arati.nankar@planetria.com');
-
-keystone.set('nav', {
-	'posts': ['posts', 'post-comments', 'post-categories'],
-	'galleries': 'galleries',
-	'enquiries': 'enquiries',
-	'users': 'users',
-	'field-tests': 'things'
+keystone.set('404', function(req, res, next) {
+	res.status(404).render('errors/404');
 });
-keystone.start();
+
+// Load Routes
+var routes = {
+	//api: importRoutes('./api'),
+	download: importRoutes('./download'),
+	views: importRoutes('./views')
+};
+
+exports = module.exports = function(app) {
+	
+	// Views
+	app.get('/', routes.views.index);
+	app.all('/offering', routes.views.offering);
+	app.all('/homepage', routes.views.homepage);
+	app.all('/companyprofile', routes.views.companyprofile);
+	app.all('/mangementteam', routes.views.mangementteam);
+	app.all('/differentiator', routes.views.differentiator);
+	app.all('/career', routes.views.career);
+	app.all('/contactlist', routes.views.contactlist);
+	app.all('/partner', routes.views.partner);
+	app.get('/softwareproduct', routes.views.softwareproduct);
+	app.get('/consultingservice', routes.views.consultingservice);
+	app.get('/msp',routes.views.msp);
+	app.get('/specializedanalyse',routes.views.specializedanalyse);
+	app.get('/technologyresale', routes.views.technologyResale);
+	app.get('/navbar', routes.views.navbar);
+	app.get('/menu',routes.views.menu);
+	app.get('/listingmenu',routes.views.listingmenu);
+	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
+	app.get('/footer',routes.views.footer);
+	app.get('/message',routes.views.message);
+	
+	// Downloads
+	app.get('/download/users', routes.download.users);
+	
+	// API
+	//app.all('/api*', keystone.initAPI);
+
+}
