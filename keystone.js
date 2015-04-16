@@ -49,8 +49,10 @@ keystone.set('locals', {
 });
 
 keystone.set('routes', require('./routes'));
+
+keystone.set('cloudinary config', { cloud_name: 'clarion', api_key: '958126136135894', api_secret: 'hwf2l0DwEJaDtMZyEi7BTF34U58' });
 // or
-keystone.set('cloudinary config', 'cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo' );
+keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
  
 // optional, will prefix all built-in tags with 'keystone_'
 keystone.set('cloudinary prefix', 'keystone');
