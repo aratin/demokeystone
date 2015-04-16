@@ -20,4 +20,3 @@ require('./listingmenu');
 require('./consultingservice');
 require('./msp');
 require('./specializedanalyse');
-require('./technologyresale');
