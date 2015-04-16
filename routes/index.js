@@ -56,10 +56,10 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/blog/:category?', routes.views.blog);
-	app.all('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
-	app.all('/contact', routes.views.contact);
+	// app.get('/blog/:category?', routes.views.blog);
+	// app.all('/blog/post/:post', routes.views.post);
+	// app.get('/gallery', routes.views.gallery);
+	// app.all('/contact', routes.views.contact);
 	app.all('/companyprofile', routes.views.companyprofile);
 	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
 	app.all('/mangementteam', routes.views.mangementteam);
