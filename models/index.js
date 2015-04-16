@@ -21,3 +21,4 @@ require('./consultingservice');
 require('./msp');
 require('./specializedanalyse');
 require('./offering');
+require('./technologyresale');
