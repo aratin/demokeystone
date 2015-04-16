@@ -50,7 +50,7 @@ keystone.set('locals', {
 
 keystone.set('routes', require('./routes'));
 
-keystone.set('cloudinary config', { cloud_name: 'clarion', api_key: '958126136135894', api_secret: 'hwf2l0DwEJaDtMZyEi7BTF34U58' });
+keystone.set('cloudinary config', { cloud_name: 'hs07p4dmn', api_key: '274679539577615', api_secret: 'WMG8Ig1GDZUY-3p-w2LmxKgFXl0' });
 // or
 keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
  
