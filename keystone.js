@@ -9,8 +9,8 @@ var keystone = require('keystone');
 console.log("keystone.js started");
 keystone.init({
 	
-	'name': 'Visual intelligence',
-	'brand': 'Visual intelligence',
+	'name': 'Visual Intelligence',
+	'brand': 'Visual Intelligence',
 	
 	'favicon': 'public/favicon.ico',
 	'less': 'public',
@@ -25,7 +25,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': process.env.COOKIE_SECRET || 'demo',
+	'cookie secret': process.env.COOKIE_SECRET || 'Visual Intelligence',
 	
 	'ga property': process.env.GA_PROPERTY,
 	'ga domain': process.env.GA_DOMAIN,
@@ -49,6 +49,9 @@ keystone.set('locals', {
 });
 
 keystone.set('routes', require('./routes'));
+
+keystone.set('routes', require('./admin/routes'));
+keystone.set('templates', require('./admin/templates'));
 
 keystone.set('cloudinary config', { cloud_name: 'hs07p4dmn', api_key: '274679539577615', api_secret: 'WMG8Ig1GDZUY-3p-w2LmxKgFXl0' });
 // or
