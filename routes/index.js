@@ -72,7 +72,7 @@ exports = module.exports = function(app) {
 	app.get('/msp',routes.views.msp);
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
 	app.all('/offering', routes.views.offering);
-
+	app.all('/technologyresale', routes.views.technologyresale);
 	// Downloads
 	app.get('/download/users', routes.download.users);
 	
