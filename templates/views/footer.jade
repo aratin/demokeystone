@@ -56,7 +56,11 @@
                   a(href=data.footers[0]._.facebookimage.limit(19,19),rel='Footer')
                     img(src=data.footers[0]._.facebookimage.limit(19,19))
           a(href="#")
-            img.social-icon(src='#{data.footers[0].linkdinimage}')
+            if data.footers[0].linkdinimage.exists
+              .row
+                .col-xs-12
+                  a(href=data.footers[0]._.linkdinimage.limit(19,19),rel='Footer')
+                    img(src=data.footers[0]._.linkdinimage.limit(19,19))
       //- Contact Ends
 //- Copyright Begins
 #copyright-box
