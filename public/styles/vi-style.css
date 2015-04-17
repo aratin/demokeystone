@@ -72,7 +72,7 @@ input.form-control, textarea.form-control {width: 50%;}
 #footer-box .footer-menu ul { margin: 0; padding: 0;}
 #footer-box .footer-menu ul li {display: block; font-size: 14px; list-style: none; line-height: 26px; }
 #footer-box .footer-menu ul li a { color: #a3b1bf;}
-#footer-box .social-icon { padding-right: 5px; position: relative; top: 0;}
+#footer-box .social-icon { padding:0 0 0 10px; position: relative; top: 0;}
 
 #copyright-box { background-color: #24272c; text-align: center; color: #fff; }
 #copyright-box a:focus, #copyright-box a:hover{text-decoration: none;}
