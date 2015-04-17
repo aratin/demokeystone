@@ -47,7 +47,7 @@ input.form-control, textarea.form-control {width: 50%;}
 #content-box {padding: 25px 0 45px;}
 #content-box  p { font-size: 14px; color: #666; line-height: 22px; margin-bottom:0;}
 #content-box .read-more { color: #010101; font-weight: 600; line-height: 33px; }
-#content-box .offer-box { width: 100%; height: auto; background-color: #ebe7e7; border-bottom: 7px solid #7bcc3d; text-align: center; color: #0093d6; padding: 38px 12px; margin-bottom: 35px; position: relative;}
+#content-box .offer-box { width: 100%; height: auto; background-color: #ebe7e7; border-bottom: 7px solid #7bcc3d; text-align: center; color: #0093d6; padding: 38px 10px; margin-bottom: 35px; position: relative;}
 #content-box .offer-box span { text-transform: uppercase; font-family: 'Raleway', sans-serif; font-weight: 600; line-height: 26px; font-size: 16px;}
 #content-box .offer-box .icon-border { width: 97px; height: 97px; border-radius: 50px; -webkit-border-radius: 50px; -o-border-radius:50px; -moz-border-radius: 50px; margin: 0 auto 38px auto; border: 1px solid #0093d6; padding: 5px; }
 #content-box .offer-box .icon-border .icon-box { background-color: #0093d6; text-align: center; width: 100%; height: 100%; border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius:100%; -moz-border-radius: 100%;}
@@ -72,7 +72,8 @@ input.form-control, textarea.form-control {width: 50%;}
 #footer-box .footer-menu ul { margin: 0; padding: 0;}
 #footer-box .footer-menu ul li {display: block; font-size: 14px; list-style: none; line-height: 26px; }
 #footer-box .footer-menu ul li a { color: #a3b1bf;}
-#footer-box .social-icon { padding:0 0 0 10px; position: relative; top: 0;}
+#footer-box .social-icon-f { padding:0 0 0 5px; position: relative; top: 0;}
+#footer-box .social-icon-l { padding:0 0 0 10px; position: relative; top: 0;}
 
 #copyright-box { background-color: #24272c; text-align: center; color: #fff; }
 #copyright-box a:focus, #copyright-box a:hover{text-decoration: none;}
