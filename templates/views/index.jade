@@ -93,11 +93,10 @@ block content
               .row
                 .col-md-2
                   if data.homepages.length
-                    .msp-images
                       if data.homepages[0].NewsAndUpdateImage.exists
                         .row
                           .col-xs-12
-                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(80,52),rel='Homepage').msp-image
+                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(80,52),rel='Homepage')
                               img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
                 .col-md-10
                   small #{data.homepages[0].NewsAndUpdateDate}
