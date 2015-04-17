@@ -24,7 +24,7 @@ Footer.add({
     footeraddress:{type: String},
     footeremail:{type: Types.Email},
 	FollowUs: { type: String},
-	facebookimage:{ type: String},
+	facebookimage:{ type: Types.CloudinaryImage},
 	linkdinimage:{ type: String}
 });
 

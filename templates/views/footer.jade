@@ -50,7 +50,11 @@
         p
           | #{data.footers[0].FollowUs} :
           a(href="#")
-            img.social-icon(src='#{data.footers[0].facebookimage}')
+            if data.footers[0].facebookimage.exists
+              .row
+                .col-xs-12
+                  a(href=data.footers[0]._.facebookimage.limit(19,19),rel='Footer')
+                    img(src=data.footers[0]._.facebookimage.limit(19,19))
           a(href="#")
             img.social-icon(src='#{data.footers[0].linkdinimage}')
       //- Contact Ends
