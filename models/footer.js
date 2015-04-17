@@ -8,7 +8,7 @@ var Footer = new keystone.List('Footer', {
 Footer.add({
 	Policytitle:{type: String},
 	OurSolutionstitle:{type: String},
-	Pdfimage:{type: String},
+	Pdfimage:{type: Types.CloudinaryImage},
 	visuallink:{type: String},
 	visualsublink:{type: String},
 	HealthcareInsurers:{type: String},

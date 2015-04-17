@@ -7,10 +7,18 @@
         .pdf-list
           ul
             li
-              img(src='#{data.footers[0].Pdfimage}')
+            if data.footers[0].Pdfimage.exists
+              .row
+                .col-xs-12
+                  a(href=data.footers[0]._.Pdfimage.limit(27,32),rel='Footer')
+                    img(src=data.footers[0]._.Pdfimage.limit(27,32))
               a(href="#") #{data.footers[0].visuallink}
             li
-              img(src='#{data.footers[0].Pdfimage}')
+            if data.footers[0].Pdfimage.exists
+              .row
+                .col-xs-12
+                  a(href=data.footers[0]._.Pdfimage.limit(27,32),rel='Footer')
+                    img(src=data.footers[0]._.Pdfimage.limit(27,32))
               a(href="#") #{data.footers[0].visualsublink}
       //- Document List Ends
       //- Footer Menu Begins
