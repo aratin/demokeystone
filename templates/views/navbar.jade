@@ -5,12 +5,24 @@
         .navbar-header
           .navbar-brand
             a(href="#")
-              img(src='#{data.navbars[0].LogoPic}', alt="logo")
+            if data.navbars[0].LogoPic.exists
+              .row
+                .col-xs-12
+                  a(href=data.navbars[0]._.LogoPic.limit(228,64),rel='Navbar')
+                    img(src=data.navbars[0]._.LogoPic.limit(228,64))
       .col-md-6
         .top-contact
           .box-1
-            img(src='#{data.navbars[0].mailPic}')
+            if data.navbars[0].mailPic.exists
+              .row
+                .col-xs-12
+                  a(href=data.navbars[0]._.mailPic.limit(26,20),rel='Navbar')
+                    img(src=data.navbars[0]._.mailPic.limit(26,20))
             span  #{data.navbars[0].mailstring}
           .box-2
-            img(src='#{data.navbars[0].contactPic}')
+            if data.navbars[0].contactPic.exists
+              .row
+                .col-xs-12
+                  a(href=data.navbars[0]._.contactPic.limit(23,23),rel='Navbar')
+                    img(src=data.navbars[0]._.contactPic.limit(23,23))
             span #{data.navbars[0].contactstring}

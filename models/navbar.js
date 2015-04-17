@@ -6,10 +6,10 @@ var Navbar = new keystone.List('Navbar', {
 });
 
 Navbar.add({
-	LogoPic: {type: String},
-	mailPic: {type: String},
+	LogoPic: {type: Types.CloudinaryImage},
+	mailPic: {type: Types.CloudinaryImage},
 	mailstring:{type: String},
-	contactPic:{type: String},
+	contactPic:{type: Types.CloudinaryImage},
 	contactstring:{type: String}
 });
 
