@@ -21,7 +21,7 @@ input.form-control, textarea.form-control {width: 50%;}
 .navbar-brand { height: auto !important; padding:15px 0 18px;}
 .navbar { margin-bottom: 0; border-radius: 0;}
 .navbar-inverse { background-image: none;}
-.navbar-nav>li { font-size: 20px; padding: 0 10px;}
+.navbar-nav>li { font-size: 20px;}
 .navbar-inverse .navbar-nav>li>a { color: #fff !important; text-shadow: none; transition:all 0.2s ease-in-out 0s;}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover { background: #036ae1; box-shadow: none; }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover{background: #036AE1;}
