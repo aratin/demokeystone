@@ -7,18 +7,10 @@
         .pdf-list
           ul
             li
-            if data.footers[0].Pdfimage.exists
-              .row
-                .col-xs-12
-                  a(href=data.footers[0]._.Pdfimage.limit(27,32),rel='Footer')
-                    img(src=data.footers[0]._.Pdfimage.limit(27,32))
+              img(src='#{data.footers[0].Pdfimage}')
               a(href="#") #{data.footers[0].visuallink}
             li
-            if data.footers[0].Pdfimage.exists
-              .row
-                .col-xs-12
-                  a(href=data.footers[0]._.Pdfimage.limit(27,32),rel='Footer')
-                    img(src=data.footers[0]._.Pdfimage.limit(27,32))
+              img(src='#{data.footers[0].Pdfimage}')
               a(href="#") #{data.footers[0].visualsublink}
       //- Document List Ends
       //- Footer Menu Begins
@@ -58,17 +50,9 @@
         p
           | #{data.footers[0].FollowUs} :
           a(href="#")
-            if data.footers[0].facebookimage.exists
-              .row
-                .col-xs-12
-                  a(href=data.footers[0]._.facebookimage.limit(19,19),rel='Footer')
-                    img(src=data.footers[0]._.facebookimage.limit(19,19))
+            img.social-icon(src='#{data.footers[0].facebookimage}')
           a(href="#")
-            if data.footers[0].linkdinimage.exists
-              .row
-                .col-xs-12
-                  a(href=data.footers[0]._.linkdinimage.limit(19,19),rel='Footer')
-                    img(src=data.footers[0]._.linkdinimage.limit(19,19))
+            img.social-icon(src='#{data.footers[0].linkdinimage}')
       //- Contact Ends
 //- Copyright Begins
 #copyright-box
