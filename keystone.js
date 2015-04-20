@@ -50,7 +50,7 @@ keystone.set('locals', {
 
 keystone.set('routes', require('./routes'));
 
-keystone.set('routes', require('./keystone/routes'));
+//keystone.set('routes', require('./keystone/routes'));
 //keystone.set('templates', require('./admin/templates'));
 
 keystone.set('cloudinary config', { cloud_name: 'hs07p4dmn', api_key: '274679539577615', api_secret: 'WMG8Ig1GDZUY-3p-w2LmxKgFXl0' });
