@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 h2 {font-size: 30px;font-weight:700;color: #000;border-bottom: 2px solid #cecece;padding-bottom:10px !important;margin-bottom:10px; margin-top:0;}
 hr { border-top-color: #cecece;margin: 10px 0; }
 small { font-size: 12px; display: block; vertical-align: top; color: #666; margin-bottom: 5px;}
 .msp-image > img{width: 100%;}
 /**************************************** Header Bar *****************************************/
-#header-top .top-contact { float: right; line-height: 84px; font-size: 15px; color: #333232; }
+#header-top .top-contact { float: right; line-height: 94px; font-size: 15px; color: #333232; }
 #header-top .top-contact .box-1, #header-top .top-contact .box-2 { float: left;}
 #header-top .top-contact i { font-size: 22px; color: #333232; }
 #header-top .top-contact  span { padding: 0 10px; position: relative; top: 0;}
@@ -21,7 +21,7 @@ input.form-control, textarea.form-control {width: 50%;}
 .navbar-brand { height: auto !important; padding:15px 0 18px;}
 .navbar { margin-bottom: 0; border-radius: 0;}
 .navbar-inverse { background-image: none;}
-.navbar-nav>li { font-size: 20px;}
+.navbar-nav>li { font-size: 20px; padding: 0;}
 .navbar-inverse .navbar-nav>li>a { color: #fff !important; text-shadow: none; transition:all 0.2s ease-in-out 0s;}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover { background: #036ae1; box-shadow: none; }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover{background: #036AE1;}

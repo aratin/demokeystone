@@ -6,7 +6,7 @@ var keystone = require('keystone');
 /**
  * Application Initialisation
  */
-console.log("keystone.js started");
+console.log("keystone.js started", keystone);
 keystone.init({
 	
 	'name': 'Visual Intelligence',
