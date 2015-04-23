@@ -1,8 +1,8 @@
-$(function() {
-    $("#print").on('click', function() {
-       // console.log("asdfasdfasd asdfasdf asdasdf");
-        $.print("#content-box");
-    });
+// $(function() {
+//     $("#print").on('click', function() {
+//        // console.log("asdfasdfasd asdfasdf asdasdf");
+//         $.print("#content-box");
+//     });
 
     var doc = new jsPDF();
         var specialElementHandlers = {
