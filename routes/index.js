@@ -60,7 +60,7 @@ exports = module.exports = function(app) {
 	// app.all('/blog/post/:post', routes.views.post);
 	// app.get('/gallery', routes.views.gallery);
 	// app.all('/contact', routes.views.contact);
-	app.all('/company-profile', routes.views.companyprofile);
+	app.all('/companyprofile', routes.views.companyprofile);
 	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
 	app.all('/mangementteam', routes.views.mangementteam);
 	app.all('/differentiator', routes.views.differentiator);
