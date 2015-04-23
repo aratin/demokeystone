@@ -9,7 +9,7 @@ require('./homepage');
 require('./navbar');
 require('./menu');
 require('./footer');
-require('./company-profile');
+require('./companyprofile');
 require('./companyinfolistmenu');
 require('./mangementteam');
 require('./differentiator');
