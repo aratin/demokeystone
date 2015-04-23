@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	// Init locals
-		locals.section = 'companyprofile';
+		locals.section = 'company-profile';
 		locals.data = [];
 
 	// Load the current CompanyProfile
@@ -68,5 +68,5 @@ exports = module.exports = function(req, res) {
 	// 	});
 	// });
 	// Render the view
-	view.render('companyprofile');
+	view.render('company-profile');
 }
