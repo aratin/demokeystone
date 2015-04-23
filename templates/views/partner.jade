@@ -7,7 +7,22 @@ block content
       #inner-banner
       #inner-content-box#content-box
         .container
-          #offerings.row
+          #offerings
+            .col-md-9.text-right
+              ul.list-inline
+                li
+                  a#print
+                    i.fa.fa-lg.fa-print
+                li
+                  |
+                li
+                  a#pdf
+                    i.fa.fa-lg.fa-file-pdf-o
+                li
+                  |
+                li
+                  a(href="/message")
+                    i.fa.fa-lg.fa-envelope
             .col-md-9
               .row
                 .col-md-3

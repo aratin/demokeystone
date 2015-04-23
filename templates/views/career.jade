@@ -7,7 +7,22 @@ block content
       #inner-banner
       #inner-content-box#content-box
         .container
-          #offerings.row
+          #offerings
+            .col-md-9.text-right
+              ul.list-inline
+                li
+                  a#print
+                    i.fa.fa-lg.fa-print
+                li
+                  |
+                li
+                  a#pdf
+                    i.fa.fa-lg.fa-file-pdf-o
+                li
+                  |
+                li
+                  a(href="/message")
+                    i.fa.fa-lg.fa-envelope
             .col-md-9
               .row
                 .col-md-4
@@ -19,22 +34,6 @@ block content
                             a(href=data.careers[0]._.careerImage.limit(900,600),rel='Career').msp-image
                               img(src=data.careers[0]._.careerImage.limit(640,640))
                 .col-md-8
-                  .row
-                    .col-md-4.col-md-offset-8.text-right
-                      ul.list-inline
-                        li
-                          a(href="#",onclick="printFunction()")
-                            i.fa.fa-lg.fa-print
-                        li
-                          |
-                        li
-                          a#pdf
-                            i.fa.fa-lg.fa-file-pdf-o
-                        li
-                          |
-                        li
-                          a
-                            i.fa.fa-lg.fa-envelope
                   p
                     | #{data.careers[0].careerText}
                     br

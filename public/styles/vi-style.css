@@ -29,7 +29,7 @@ input.form-control, textarea.form-control {width: 50%;}
 .navbar-nav>li>.dropdown-menu { padding: 0;}
 .dropdown-menu>li>a { color: #fff; font-size: 16px; line-height: 28px;}
 .dropdown-menu>li {/*border-bottom: 1px solid #808080;*/}
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a.active, .dropdown-menu > li > a:focus { background-color: #000; background-image: none; color: #fff;}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a.active, .dropdown-menu > li > a:focus {background:#000000; filter: none; color: #fff;}
 .dropdown-menu > li > ul > li > a:hover, .dropdown-menu > li > ul > li > a:focus { background-color: #D5D5D5; color: #666; }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a { background: #036ae1 !important; box-shadow: none !important; }
 .dropdown-menu>li.sub-dropdown ul.inner-menu {position: relative; background-color: #A8A8A8; padding: 0; margin: 0; border-radius: 0; width: 100%;}
