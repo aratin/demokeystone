@@ -1,6 +1,11 @@
-extends ../../layouts/default
-
+extends ../layouts/default
 block content
-	.text-center
-		h1 404
-		p.lead Sorry, the page you requested can't be found.
+    header
+      include ../views/navbar
+      include ../views/menu
+     section
+      .container-fluid
+        .row
+          footer
+            include ../views/footer
+            
