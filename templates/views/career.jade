@@ -11,7 +11,7 @@ block content
             .col-md-9.text-right
               ul.list-inline
                 li
-                  a(href="#",onclick="printfunction.js")
+                  a(href="#",onclick="printFunction()")
                     i.fa.fa-lg.fa-print
                 li
                   |
@@ -31,7 +31,6 @@ block content
                       if data.careers[0].careerImage.exists
                         .row
                           .col-xs-12
-                            a(href=data.careers[0]._.careerImage.limit(900,600),rel='Career').msp-image
                               img(src=data.careers[0]._.careerImage.limit(640,640))
                 .col-md-8
                   p

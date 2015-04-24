@@ -31,7 +31,6 @@ block content
                       if data.offerings[0].offeringImage.exists
                         .row
                           .col-xs-12
-                            a(href=data.offerings[0]._.offeringImage.limit(900,600),rel='Offering').msp-image
                               img(src=data.offerings[0]._.offeringImage.limit(640,640))
                 .col-md-8
             include ../views/listingmenu
