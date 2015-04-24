@@ -12,6 +12,7 @@ small { font-size: 12px; display: block; vertical-align: top; color: #666; margi
 #header-top .top-contact span,#header-top .top-contact a { color: #333232; padding: 0 10px; position: relative; top: 0;}
 input.form-control, textarea.form-control {width: 50%;}
 #offerings form label {margin: 10px 0;}
+.col-md-4 > img {width: 100%;}
 /*****************************************************************************************/
 
 /**************************************** Navigation Bar *****************************************/
