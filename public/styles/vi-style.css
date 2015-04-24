@@ -95,14 +95,14 @@ input.form-control, textarea.form-control {width: 50%;}
 /***************************************************************************************/
 
 /****************************** Offerings Page *****************************************/
-#offerings p { font-size: 14px; line-height: 22px; color: #666666; margin: 0; }
+#offerings p { font-size: 14px; line-height: 22px; color: #666666; margin:  0; }
 .list-inline a{cursor: pointer;}
 #offerings .offer-listing{}
 #offerings .offer-listing i { padding-right: 10px; font-size: 14px;}
 #offerings .offer-listing ul {margin: -10px 0 0 0; padding: 0;}
 #offerings .offer-listing ul li { font-size: 16px; line-height: 40px; color: #8e8e8e; border-bottom: 1px solid #cecece; list-style-position: inside; list-style: none; font-weight: 600;}
 #offerings .offer-listing ul li a { color: #8e8e8e;}
-.footer-container{position: absolute; bottom: 0;}
+
 /***************************************************************************************/
 
 /******************************* Media queries *****************************************/
