@@ -14,7 +14,7 @@
         $('#pdf').click(function () {
            // alert("asdfasdf");
             doc.fromHTML($('#content-box').html(), 15, 15, {
-                'width': 600,
+                'width': 170,
                     'elementHandlers': specialElementHandlers
             });
             doc.save('sample-file.pdf');
