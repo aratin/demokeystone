@@ -11,10 +11,10 @@
             }
         };
 
-        $('#pdf').click(function () {
+        $('#pdf').on('click',function () {
            // alert("asdfasdf");
             doc.fromHTML($('#content-box').html(), 15, 15, {
-                'width': 170,
+                'width': 600,
                     'elementHandlers': specialElementHandlers
             });
             doc.save('sample-file.pdf');
