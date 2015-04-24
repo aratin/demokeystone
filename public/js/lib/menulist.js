@@ -36,12 +36,12 @@ for(var i = 0; i < menulink.length; i++){
 $("a[href$='" + link + "']").addClass('active');
 $('#' + parent).addClass('active');
 
-$('li.dropdown').on('mouseover', function(e){
-    $(this).find("ul:first").show();
-    $(this).addClass('active');
-}).on('mouseout', function(e){
-	$(this).find("ul:first").hide();
-	if($(this).attr('id') !== $('#' + parent).attr('id')) {
-    	$(this).removeClass('active');
-	}
-});
+// $('li.dropdown').on('mouseover', function(e){
+//     $(this).find("ul:first").show();
+//     $(this).addClass('active');
+// }).on('mouseout', function(e){
+// 	$(this).find("ul:first").hide();
+// 	if($(this).attr('id') !== $('#' + parent).attr('id')) {
+//     	$(this).removeClass('active');
+// 	}
+// });
