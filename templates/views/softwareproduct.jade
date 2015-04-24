@@ -27,11 +27,8 @@ block content
               .row
                 .col-md-4
                   if data.softwareproducts.length
-                    .msp-images
                       if data.softwareproducts[0].softwareProductsImages.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.softwareproducts[0]._.softwareProductsImages.limit(640,640))
+                        img(src=data.softwareproducts[0]._.softwareProductsImages.limit(640,640))
                 .col-md-8
                     p
                       | #{data.softwareproducts[0].softwareProucttext}
