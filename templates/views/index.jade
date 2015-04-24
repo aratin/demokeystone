@@ -90,7 +90,7 @@ block content
             .col-md-6
               h2 #{data.homepages[0].NewsAndUpdatetitle}
               .row
-                .col-md-2
+                .col-md-2.col-sm-2
                   if data.homepages.length
                       if data.homepages[0].NewsAndUpdateImage.exists
                         img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
@@ -101,7 +101,7 @@ block content
                   p
               hr
               .row
-                .col-md-2
+                .col-md-2.col-sm-2
                   if data.homepages.length
                       if data.homepages[0].NewsAndUpdateImage.exists
                         img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
