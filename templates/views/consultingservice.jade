@@ -27,11 +27,8 @@ block content
               .row
                 .col-md-4
                   if data.consultingservices.length
-                    .msp-images
                       if data.consultingservices[0].consultingServiceimage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.consultingservices[0]._.consultingServiceimage.limit(640,640))
+                        img(src=data.consultingservices[0]._.consultingServiceimage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.consultingservices[0].consultingServicetext}

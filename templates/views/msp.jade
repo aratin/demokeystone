@@ -27,11 +27,8 @@ block content
               .row
                 .col-md-4
                   if data.msps.length
-                    .msp-images
                       if data.msps[0].mspImages.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.msps[0]._.mspImages.limit(640,640))
+                        img(src=data.msps[0]._.mspImages.limit(640,640))
                 .col-md-8
                   p
                     | #{data.msps[0].mspSolutionstext}

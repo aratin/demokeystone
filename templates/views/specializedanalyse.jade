@@ -27,11 +27,8 @@ block content
               .row
                 .col-md-4
                  if data.specializedanalyses.length
-                    .msp-images
-                      if data.specializedanalyses[0].specialiseimage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.specializedanalyses[0]._.specialiseimage.limit(640,640))
+                    if data.specializedanalyses[0].specialiseimage.exists
+                      img(src=data.specializedanalyses[0]._.specialiseimage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.specializedanalyses[0].specialiseAnyalisetext}

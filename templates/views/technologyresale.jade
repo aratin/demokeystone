@@ -27,11 +27,8 @@ block content
               .row
                 .col-md-4
                   if data.technologyresales.length
-                    .msp-images
                       if data.technologyresales[0].technologyResaleimage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.technologyresales[0]._.technologyResaleimage.limit(640,640))
+                        img(src=data.technologyresales[0]._.technologyResaleimage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.technologyresales[0].technologyResaletext}
