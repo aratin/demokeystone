@@ -95,7 +95,7 @@ input.form-control, textarea.form-control {width: 50%;}
 /***************************************************************************************/
 
 /****************************** Offerings Page *****************************************/
-#offerings p { font-size: 14px; line-height: 22px; color: #666666; margin: 0 0 15px 0; }
+#offerings p { font-size: 14px; line-height: 22px; color: #666666; margin: 0; }
 .list-inline a{cursor: pointer;}
 #offerings .offer-listing{}
 #offerings .offer-listing i { padding-right: 10px; font-size: 14px;}
