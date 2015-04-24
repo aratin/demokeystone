@@ -27,22 +27,16 @@ block content
               .row
                 .col-md-4
                   if data.differentiators.length
-                    .msp-images
                       if data.differentiators[0].differentiatorImage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.differentiators[0]._.differentiatorImage.limit(640,640))
+                        img(src=data.differentiators[0]._.differentiatorImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorText}
                .row
                 .col-md-4
                  if data.differentiators.length
-                    .msp-images
                       if data.differentiators[0].differentiatorSubImage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
+                        img(src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortSubText}
@@ -52,11 +46,8 @@ block content
                .row
                 .col-md-4
                   if data.differentiators.length
-                    .msp-images
                       if data.differentiators[0].differentiatorSubStringImage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
+                        img(src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortStringText}
@@ -65,11 +56,8 @@ block content
                .row
                 .col-md-4
                   if data.differentiators.length
-                    .msp-images
                       if data.differentiators[0].differentiatorSubtextImage.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
+                        img(src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorTextLong}
