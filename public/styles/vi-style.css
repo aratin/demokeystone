@@ -160,6 +160,8 @@ input.form-control, textarea.form-control {width: 50%;}
 	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover{background-color: #000; background-image: none; color: #fff;}
 	.pdf-list img {float: left;margin-right: 10px;margin-top: 10px;}
 	#footer-box .pdf-list ul li a {color: #a3b1bf;display: block;float: left;margin-left: 0;width: 80%;}
+	#footer-box .pdf-list ul li{margin:0 0 10px; overflow: hidden;}
+	.pdf-list{overflow: hidden;}
 }
 
 /***************************************************************************************/
