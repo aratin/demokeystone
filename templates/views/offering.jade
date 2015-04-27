@@ -31,7 +31,7 @@ block content
                       if data.offerings[0].offeringImage.exists
                         .row
                           .col-xs-12
-                              img(src=data.offerings[0]._.offeringImage.limit(640,640))
+                              img(id="image",src=data.offerings[0]._.offeringImage.limit(640,640))
                 .col-md-8
             include ../views/listingmenu
       .container-fluid

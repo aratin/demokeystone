@@ -31,7 +31,7 @@ block content
                       if data.companyprofiles[0].companyProfileimage.exists
                         .row
                           .col-xs-12
-                              img(src=data.companyprofiles[0]._.companyProfileimage.limit(640,640))
+                              img(id="image",src=data.companyprofiles[0]._.companyProfileimage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.companyprofiles.companyProfiletext}

@@ -28,7 +28,7 @@ block content
                 .col-md-4
                  if data.specializedanalyses.length
                     if data.specializedanalyses[0].specialiseimage.exists
-                      img(src=data.specializedanalyses[0]._.specialiseimage.limit(640,640))
+                      img(id="image",src=data.specializedanalyses[0]._.specialiseimage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.specializedanalyses[0].specialiseAnyalisetext}
