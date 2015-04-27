@@ -14,12 +14,10 @@ block content
                   a(href="#",onclick="printFunction()")
                     i.fa.fa-lg.fa-print
                 li
-                  |
                 li
                   a#pdf
                     i.fa.fa-lg.fa-file-pdf-o
                 li
-                  |
                 li
                   a(href="/message")
                     i.fa.fa-lg.fa-envelope
@@ -28,7 +26,7 @@ block content
                 .col-md-4
                   if data.differentiators.length
                       if data.differentiators[0].differentiatorImage.exists
-                        img(src=data.differentiators[0]._.differentiatorImage.limit(640,640))
+                        img(id="image",src=data.differentiators[0]._.differentiatorImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorText}
@@ -36,7 +34,7 @@ block content
                 .col-md-4
                  if data.differentiators.length
                       if data.differentiators[0].differentiatorSubImage.exists
-                        img(src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
+                        img(id="image",src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortSubText}
@@ -47,7 +45,7 @@ block content
                 .col-md-4
                   if data.differentiators.length
                       if data.differentiators[0].differentiatorSubStringImage.exists
-                        img(src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
+                        img(id="image",src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortStringText}
@@ -57,7 +55,7 @@ block content
                 .col-md-4
                   if data.differentiators.length
                       if data.differentiators[0].differentiatorSubtextImage.exists
-                        img(src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
+                        img(id="image",src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorTextLong}

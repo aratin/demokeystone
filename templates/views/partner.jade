@@ -14,12 +14,10 @@ block content
                   a(href="#",onclick="printFunction()")
                     i.fa.fa-lg.fa-print
                 li
-                  |
                 li
                   a#pdf
                     i.fa.fa-lg.fa-file-pdf-o
                 li
-                  |
                 li
                   a(href="/message")
                     i.fa.fa-lg.fa-envelope
@@ -27,12 +25,12 @@ block content
               .row
                 .col-md-3
                   .thumbnail
-                    img.img-responsive(src='#{data.partners[0].partnerimage}' alt='#{data.partners[0].partnerimage}')
+                    img.img-responsive(id="image",src='#{data.partners[0].partnerimage}' alt='#{data.partners[0].partnerimage}')
                   .caption
                     h3.text-center #{data.partners[0].partnertext}
                 .col-md-3
                   .thumbnail
-                    img.img-responsive(src='#{data.partners[0].partnersubimage}')
+                    img.img-responsive(id="image",src='#{data.partners[0].partnersubimage}')
                   .caption
                     h3.text-center #{data.partners[0].partnersubtext}
             include ../views/companyinfolistmenu
