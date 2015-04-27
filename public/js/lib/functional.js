@@ -23,7 +23,7 @@
         var imageSrc = $('#image').attr('src');
         var doc = new jsPDF();
 
-        var imgData = 'data:image/jpeg;base64,imageSrc';
+        var imgData = 'data:image/jpeg;base64,/imageSrc';
         doc.setFontSize(40);
         doc.text(35, 25, "Octonyan loves jsPDF");
         doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
