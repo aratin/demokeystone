@@ -5,7 +5,8 @@
 //     });
 
     $(document).ready(function(){ 
-
+        var imageSrc = $('#image').attr('src')
+        console.log(imageSrc);
     var specialElementHandlers = {
         '#editor': function (element,renderer) {
             return true;
