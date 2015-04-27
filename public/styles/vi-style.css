@@ -26,7 +26,7 @@ input.form-control, textarea.form-control {width: 50%;}
 .navbar-inverse .navbar-nav>li>a { color: #fff !important; text-shadow: none; transition:all 0.2s ease-in-out 0s;}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover { background: #036ae1; box-shadow: none; }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover{background: #036AE1;}
-.dropdown-menu { background-color: #8e8e8e; border: none;}
+.dropdown-menu { overflow:hidden; background-color: #8e8e8e; border: none;}
 .navbar-nav>li>.dropdown-menu { padding: 0;}
 .dropdown-menu>li>a { color: #fff; font-size: 16px; line-height: 28px;}
 .dropdown-menu>li {/*border-bottom: 1px solid #808080;*/}
@@ -125,7 +125,7 @@ input.form-control, textarea.form-control {width: 50%;}
 }
 @media (max-width: 767px)
 {
-	#offerings .col-md-9{padding-bottom: 40px;}
+	/*#offerings .col-md-9{padding-bottom: 40px;}*/
 	input.form-control, textarea.form-control, #offerings form label{width: 92%; margin: 5px 10px;}
 	#offerings form button{margin:0 10px;}
 	#offerings p{float: left; width: 100%; margin: 20px 0 0;}
@@ -165,7 +165,9 @@ input.form-control, textarea.form-control {width: 50%;}
 	#footer-box .footer-menu ul li{margin-left: 10px;}
 	#content-box .offer-box{margin-bottom: 20px;}
 }
-
+@media (max-width: 360px){
+	#footer-box .pdf-list ul li a{top:10px;}
+}
 /***************************************************************************************/
 
 
