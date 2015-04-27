@@ -23,10 +23,12 @@
         var imageSrc = $('#image').attr('src');
         var doc = new jsPDF();
 
-        doc.addImage(imageSrc, 'JPEG', 15, 40, 180, 180);
-        doc.fromHTML($('#content-box').html(), 15, 15, {
-            'width': 170,'elementHandlers': specialElementHandlers
-        });
+        doc.setFontSize(40);
+        doc.text(35, 25, "Octonyan loves jsPDF");
+        doc.addImage(imageSrc, 'PNG', 15, 40, 180, 180);
+        // doc.fromHTML($('#content-box').html(), 15, 15, {
+        //     'width': 170,'elementHandlers': specialElementHandlers
+        // });
         doc.save('sample-file.pdf');
     });  
 });
