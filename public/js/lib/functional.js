@@ -23,7 +23,7 @@
         console.log(imgData);
       // doc.setFontSize(40);
         //doc.text(35, 25, "#content-box");
-        //doc.addImage(imgData, 'JPEG', 15, 40, 100, 50);
+        doc.addImage(imgData, 'JPEG', 15, 40, 80, 80);
         doc.fromHTML($('#content-box').html(), 15, 15, {
              'width': 170,'elementHandlers': specialElementHandlers
          });
