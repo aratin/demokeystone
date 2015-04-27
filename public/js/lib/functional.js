@@ -22,10 +22,10 @@
  $('#pdf').click(function () {
         var imageSrc = $('#image').attr('src');
 
-        console.log(imageSrc);
+        console.log(imgData);
         var doc = new jsPDF();
 
-        var imgData = 'data:image/jpeg;base64,/'+imageSrc;
+        var imgData = $.base64('encode', imageSrc);
         console.log(imgData);
         doc.setFontSize(40);
         doc.text(35, 25, "Octonyan loves jsPDF");
