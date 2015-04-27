@@ -5,15 +5,25 @@
 //     });
 
     $(document).ready(function(){ 
-        var imageSrc = $('#image').attr('src')
-        console.log(imageSrc);
+        
+        //console.log(imageSrc);
+
+        var doc = new jsPDF();
+
+        doc.setFontSize(40);
+        doc.text(35, 25, "Octonyan loves jsPDF");
+       
+
     var specialElementHandlers = {
         '#editor': function (element,renderer) {
             return true;
         }
     };
  $('#pdf').click(function () {
+        var imageSrc = $('#image').attr('src');
         var doc = new jsPDF();
+
+        doc.addImage(imageSrc, 'JPEG', 15, 40, 180, 180);
         doc.fromHTML($('#image').html(), 15, 15, {
             'width': 170,'elementHandlers': specialElementHandlers
         });
