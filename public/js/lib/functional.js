@@ -24,7 +24,7 @@
         var doc = new jsPDF();
 
         doc.addImage(imageSrc, 'JPEG', 15, 40, 180, 180);
-        doc.fromHTML($('#image').html(), 15, 15, {
+        doc.fromHTML($('#content-box').html(), 15, 15, {
             'width': 170,'elementHandlers': specialElementHandlers
         });
         doc.save('sample-file.pdf');
