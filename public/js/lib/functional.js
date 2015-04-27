@@ -13,7 +13,7 @@
     };
  $('#pdf').click(function () {
         var doc = new jsPDF();
-        doc.fromHTML($('#content-box').html(), 15, 15, {
+        doc.fromHTML($('#content-box').html().$(":image"), 15, 15, {
             'width': 170,'elementHandlers': specialElementHandlers
         });
         doc.save('sample-file.pdf');
