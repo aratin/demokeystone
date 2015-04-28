@@ -34,7 +34,7 @@ block content
                 .col-md-4
                  if data.differentiators.length
                       if data.differentiators[0].differentiatorSubImage.exists
-                        img(id="image",src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
+                        img(id="image1",src=data.differentiators[0]._.differentiatorSubImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortSubText}
@@ -45,7 +45,7 @@ block content
                 .col-md-4
                   if data.differentiators.length
                       if data.differentiators[0].differentiatorSubStringImage.exists
-                        img(id="image",src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
+                        img(id="image2",src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorShortStringText}
@@ -55,7 +55,7 @@ block content
                 .col-md-4
                   if data.differentiators.length
                       if data.differentiators[0].differentiatorSubtextImage.exists
-                        img(id="image",src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
+                        img(id="image3",src=data.differentiators[0]._.differentiatorSubtextImage.limit(640,640))
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorTextLong}
