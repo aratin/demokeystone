@@ -21,7 +21,7 @@ $('#pdf').click(function () {
     var imageUrl = $('#image').attr('src');
 
     console.log('imageUrl', imageUrl);    
-     var dataURL;
+    // var dataURL;
     function convertImgToBase64(url, callback, outputFormat){
         var canvas = document.createElement('CANVAS');
         var ctx = canvas.getContext('2d');
@@ -32,7 +32,7 @@ $('#pdf').click(function () {
             canvas.height = img.height;
             canvas.width = img.width;
             ctx.drawImage(img,0,0);
-            dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+            var dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
             createPdf();
             console.log('dataUrl',dataURL);
             //callback.call(this, dataURL);
