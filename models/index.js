@@ -23,4 +23,5 @@ require('./specializedanalyse');
 require('./offering');
 require('./technologyresale');
 require('./contactform');
+require('./analyticalportal');
 
