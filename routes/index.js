@@ -79,7 +79,6 @@ exports = module.exports = function(app) {
 	app.all('/marketresearch', routes.views.marketresearch);
 	app.all('/tibcospotfirecustom', routes.views.tibcospotfirecustom);
 	app.all('/readmore', routes.views.readmore);
-	app.all('/errors/404', routes.views.errors);
 
 	
 	// Downloads
