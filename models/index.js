@@ -27,3 +27,4 @@ require('./analyticalportal');
 require('./tibcospotfire');
 require('./tibcospotfirecustom');
 require('./marketresearch');
+require('./readmore');
