@@ -19,13 +19,10 @@ var imageSrc;
 $('#pdf').click(function () {
     //image converet to base 64 open
     var imageUrl = $('#image').attr('src');
-    var imageUrl1 = $('#image1').attr('src');
-    var imageUrl2 = $('#image2').attr('src');
-    var imageUrl3 = $('#image3').attr('src');
 
     console.log('imageUrl', imageUrl);    
-    var dataURL;
-    function convertImgToBase64(url){
+     var dataURL;
+    function convertImgToBase64(url, callback, outputFormat){
         var canvas = document.createElement('CANVAS');
         var ctx = canvas.getContext('2d');
         var img = new Image;
