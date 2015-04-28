@@ -25,3 +25,5 @@ require('./technologyresale');
 require('./contactform');
 require('./analyticalportal');
 require('./tibcospotfire');
+require('./tibcospotfirecustom');
+require('./marketresearch');

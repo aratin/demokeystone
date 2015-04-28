@@ -76,6 +76,8 @@ exports = module.exports = function(app) {
 	app.all('/contactform', routes.views.contactform);
 	app.all('/analyticalportal', routes.views.analyticalportal);
 	app.all('/tibcospotfire', routes.views.tibcospotfire);
+	app.all('/marketresearch', routes.views.marketresearch);
+	app.all('/tibcospotfirecustom', routes.views.tibcospotfirecustom);
 
 	
 	// Downloads
