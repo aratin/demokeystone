@@ -48,10 +48,10 @@ $('#pdf').click(function () {
         console.log(imageSrc);
         var imgData = dataURL;
        // doc.setFontSize(40);
-        doc.text(30, 20, "Software products");
+        doc.text(10, 20, "Software products");
         doc.addImage(imgData, 'JPEG', 15, 15, 50, 50);
-        doc.fromHTML($('#content-box').html(), 80, 80, {
-             'width': 150,'elementHandlers': specialElementHandlers
+        doc.fromHTML($('#content-box').html(), 15, 15, {
+             'width': 170,'elementHandlers': specialElementHandlers
         });
         doc.save('sample-file.pdf');
     }
