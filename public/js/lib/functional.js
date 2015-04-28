@@ -50,7 +50,8 @@ $('#pdf').click(function () {
        // doc.setFontSize(40);
         //doc.text(10, 20, "Software products");
         //doc.addImage(imgData, 'JPEG', 15, 15, 50, 50);
-        doc.fromHTML($('#content-box').html(), 15, 15, {
+        doc.setFontSize(25);
+        doc.fromHTML($(this).siblings('.col-md-9').html(), 15, 15, {
              'width': 170,'elementHandlers': specialElementHandlers
         });
         doc.save('sample-file.pdf');
