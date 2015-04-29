@@ -55,22 +55,24 @@ $(document).ready(function(){
                 // image convert base64 close
         function createPdf() {
             //console.log('dataUrl in createPdf',dataURL);
-            var doc = new jsPDF();
-           // console.log(imageSrc);
-            var imgData;
-            for (var i=0; i<dataURLArr.length; i++) {
-                imgData = dataURLArr[i];
-                doc.addImage(imgData, 'JPEG', 15*(i+1), 15*(i+1), 40, 40);
-            }         
-            doc.fromHTML($('#content-box').html(), 15, 15, {
-                'width': 170,'elementHandlers': specialElementHandlers
-            });
-            doc.save('sample-file.pdf');
-                       // doc.setFontSize(40);
+            if (dataURLArr.length > 0) {
+                var doc = new jsPDF();
+               // console.log(imageSrc);
+                var imgData;
+                for (var i=0; i<dataURLArr.length; i++) {
+                    imgData = dataURLArr[i];
+                    doc.addImage(imgData, 'JPEG', 15*(i+1), 15*(i+1), 40, 40);
+                }         
+                doc.fromHTML($('#content-box').html(), 15, 15, {
+                    'width': 170,'elementHandlers': specialElementHandlers
+                });
+                doc.save('sample-file.pdf');
+            }
+                           // doc.setFontSize(40);
             //doc.text(10, 20, data);
         };
-        if (dataURLArr.length > 0) {
+        ///if (dataURLArr.length > 0) {
             createPdf();
-        }
+        //}
     });
 }); 
