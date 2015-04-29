@@ -27,7 +27,10 @@ $(document).ready(function(){
         var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
             if(imageArr[i] == 'undefined' || imageArr[i] == null) {
-                delete imageArr[i];
+                var index = imageArr.indexOf(imageArr[i]);
+                if (index > -1) {
+                    imageArr.splice(index, 1);
+                }               
             } else {
                 convertImgToBase64(imageArr[i], i);
             }            
