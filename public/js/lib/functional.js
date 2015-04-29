@@ -18,11 +18,10 @@ var imageSrc;
 
 $('#pdf').click(function () {
     //image converet to base 64 open
-    var imageUrl[i];
-        imageUrl[0] = $('#image').attr('src');
-        imageUrl[1] = $('#image1').attr('src');
-        imageUrl[2] = $('#image2').attr('src');
-        imageUrl[3] = $('#image3').attr('src');
+    var imageUrl[0] = $('#image').attr('src');
+    var imageUrl[1] = $('#image1').attr('src');
+    var imageUrl[2] = $('#image2').attr('src');
+    var imageUrl[3] = $('#image3').attr('src');
 
 
     //console.log('imageUrl', imageUrl);    
