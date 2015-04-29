@@ -19,7 +19,7 @@ $(document).ready(function(){
     $('#pdf').click(function () {
         //image converet to base 64 open
         var imageUrl = $('#image').attr('src');
-        var data = $('.content-box').html();
+        var data = $('#content-box').html();
         console.log('imageUrl', imageUrl);   
         
         function convertImgToBase64(url, callback, outputFormat){
