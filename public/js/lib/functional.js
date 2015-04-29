@@ -49,7 +49,7 @@ $('#pdf').click(function () {
         var imgData = dataURL;
        // doc.setFontSize(40);
         //doc.text(10, 20, "Software products");
-        doc.addImage(imgData, 'JPEG', 15, 15, 50, 50);
+        doc.addImage(imgData, 'JPEG', 15, 15, 40, 40);
         doc.fromHTML($('#content-box').html(), 15, 15, {
              'width': 170,'elementHandlers': specialElementHandlers
         });
