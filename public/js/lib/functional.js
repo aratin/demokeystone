@@ -4,44 +4,17 @@
 //         $.print("#content-box");
 //     });
 var imageSrc;
-    $(document).ready(function(){
-         imageSrc = $('#image').attr('src');
-        //console.log(imageSrc);
+$(document).ready(function(){
+    imageSrc = $('#image').attr('src');
+    //console.log(imageSrc);
 
-        var doc = new jsPDF();
+    var doc = new jsPDF();
 
     var specialElementHandlers = {
         '#editor': function (element,renderer) {
             return true;
         }
-    };   
-
-$('#pdf').click(function () {
-    //image converet to base 64 open
-    var imageUrl = $('#image').attr('src');
-
-    console.log('imageUrl', imageUrl);    
-     var dataURL;
-    function convertImgToBase64(url, callback, outputFormat){
-        var canvas = document.createElement('CANVAS');
-        var ctx = canvas.getContext('2d');
-        var img = new Image;
-        img.crossOrigin = 'Anonymous';
-        img.onload = function(){
-            canvas.height = img.height;
-            canvas.width = img.width;
-            ctx.drawImage(img,0,0);
-             dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
-            createPdf();
-            console.log('dataUrl',dataURL);
-            //callback.call(this, dataURL);
-            // Clean up
-            canvas = null; 
-        };       
-        img.src = url;         
-    }
-    convertImgToBase64(imageUrl); 
-    // image convert base64 close
+    };
     function createPdf() {
         //console.log('dataUrl in createPdf',dataURL);
         var doc = new jsPDF();
@@ -54,13 +27,31 @@ $('#pdf').click(function () {
             'width': 170,'elementHandlers': specialElementHandlers
        });
         doc.save('sample-file.pdf');
-    }
+    };
+    $('#pdf').click(function () {
+        //image converet to base 64 open
+        var imageUrl = $('#image').attr('src');
+
+        console.log('imageUrl', imageUrl);    
+         var dataURL;
+        function convertImgToBase64(url, callback, outputFormat){
+            var canvas = document.createElement('CANVAS');
+            var ctx = canvas.getContext('2d');
+            var img = new Image;
+            img.crossOrigin = 'Anonymous';
+            img.onload = function(){
+                canvas.height = img.height;
+                canvas.width = img.width;
+                ctx.drawImage(img,0,0);
+                dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+                createPdf();
+                console.log('dataUrl',dataURL);
+                //callback.call(this, dataURL);
+                // Clean up
+                canvas = null; 
+            };       
+            img.src = url;         
+        }
+        convertImgToBase64(imageUrl);        // image convert base64 close
     });
 }); 
-
-      $(function() {
-    $("#message").on('click', function() {
-        alert("asdfasdf");
-       // $.message("#formdata");
-    });  
-     });  
