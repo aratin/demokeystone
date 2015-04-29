@@ -22,10 +22,15 @@ $(document).ready(function(){
         var imageUrl1 = $('#image1').attr('src');
         var imageUrl2 = $('#image2').attr('src');
         var imageUrl3 = $('#image3').attr('src');
+
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
-            convertImgToBase64(imageArr[i], i);            
+            if(imageArr[i] == 'undefined' || imageArr[i] == null) {
+                delete imageArr[i];
+            } else {
+                convertImgToBase64(imageArr[i], i);
+            }            
             //createPdf();
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
         }       
