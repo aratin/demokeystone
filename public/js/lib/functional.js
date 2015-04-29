@@ -9,7 +9,7 @@ $(document).ready(function(){
     //console.log(imageSrc);
 
     var doc = new jsPDF();
-
+    var dataURL;
     var specialElementHandlers = {
         '#editor': function (element,renderer) {
             return true;
@@ -20,8 +20,8 @@ $(document).ready(function(){
         //image converet to base 64 open
         var imageUrl = $('#image').attr('src');
         var data = $('.content-box').html();
-        console.log('imageUrl', imageUrl);    
-        var dataURL;
+        console.log('imageUrl', imageUrl);   
+        
         function convertImgToBase64(url, callback, outputFormat){
             var canvas = document.createElement('CANVAS');
             var ctx = canvas.getContext('2d');
