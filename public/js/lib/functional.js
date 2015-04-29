@@ -15,57 +15,61 @@ var imageSrc;
             return true;
         }
     };   
-
+    var imageCount = 0;
 $('#pdf').click(function () {
     //image converet to base 64 open
-    var imageUrl = [];
-    imageUrl[0] = $('#image').attr('src');
-    imageUrl[1] = $('#image1').attr('src');
-    imageUrl[2] = $('#image2').attr('src');
-    imageUrl[3] = $('#image3').attr('src');
-
-
+    //var imageUrl = $('#image').attr('src');
     //console.log('imageUrl', imageUrl);    
-     var dataURL;
-     //var img
-     for(var i=0,i<imageUrl[i].length,i++)
-     {
-        function convertImgToBase64(url, callback, outputFormat)
-        {
-            var canvas = document.createElement('CANVAS');
-            var ctx = canvas.getContext('2d');
-            var img = new Image;
-            img.crossOrigin = 'Anonymous';
-            img.onload = function()
-            {
-                  canvas.height = img.height;
-                  canvas.width = img.width;
-                  ctx.drawImage(img,0,0);
-                  dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
-                //createPdf();
-                    console.log('dataUrl',dataURL);
-                //callback.call(this, dataURL);
-                // Clean up
-                    canvas = null; 
-             };       
-                img.src = imageUrl[i];         
-        }
-     }
     
-    convertImgToBase64(imageUrl); 
-    createPdf();
+    var imageUrl = $('#image').attr('src');
+    var imageUrl1 = $('#image1').attr('src');
+    var imageUrl2 = $('#image2').attr('src');
+    var imageUrl3 = $('#image3').attr('src');
+    var imgArray = [imageUrl, imageUrl1, imageUrl2, imageUrl3];
+
+    var dataURL;
+    var imgURLArray = [];
+    function convertImgToBase64(url, callback, outputFormat){
+        var canvas = document.createElement('CANVAS');
+        var ctx = canvas.getContext('2d');
+        var img = new Image;
+        img.crossOrigin = 'Anonymous';
+        img.src = url; 
+        //canvas = null; 
+        
+        img.onload = function(){
+            canvas.height = img.height;
+            canvas.width = img.width;
+            ctx.drawImage(img,0,0);
+            dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+            imgURLArray.push(dataURL);
+            imageCount++;
+            if(imageCount < imgArray.length) 
+            {
+                console.log('imageCount: ',imageCount);
+                convertImgToBase64(imgArray[imageCount]);
+            }
+            else{
+                console.log('imgURLArray: ',imgURLArray);
+                console.log('imageCount: ',imageCount);
+                imageCount = 0;
+                //createPdf();
+            }
+            //callback.call(this, dataURL);
+            // Clean up
+        };
+    }
+    convertImgToBase64(imgArray[0]);
     // image convert base64 close
     function createPdf() {
-        //console.log('dataUrl in createPdf',dataURL);
+        console.log('dataUrl in createPdf',dataURL);
         var doc = new jsPDF();
         console.log(imageSrc);
         var imgData = dataURL;
-       // doc.setFontSize(40);
-        //doc.text(10, 20, "Software products");
-        doc.addImage(imgData, 'JPEG', 15, 15, 40, 40);
-        //doc.fromHTML($('.content-box').html(), 15, 15, {
-           //  'width': 170,'elementHandlers': specialElementHandlers
-     //   });
+        doc.addImage(imgData, 'JPEG', 15, 15, 50, 50);
+        doc.fromHTML($('#content-box').html(), 50, 50, {
+             'width': 150,'elementHandlers': specialElementHandlers
+        });
         doc.save('sample-file.pdf');
     }
     });
