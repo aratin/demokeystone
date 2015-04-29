@@ -25,7 +25,10 @@ $(document).ready(function(){
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
-            convertImgToBase64(imageArr[i]);           
+            convertImgToBase64(imageArr[i]);
+            if(i==imageArr.length-1) {
+                createPdf();
+            }          
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
         }       
         
@@ -50,7 +53,7 @@ $(document).ready(function(){
                 // Clean up
                 canvas = null; 
             };    
-                    
+                  
         }
                 // image convert base64 close
         function createPdf() {
@@ -72,7 +75,7 @@ $(document).ready(function(){
             //doc.text(10, 20, data);
         };
         ///if (dataURLArr.length > 0) {
-            createPdf();
+            
         //}
     });
 }); 
