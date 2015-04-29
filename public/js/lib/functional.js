@@ -18,29 +18,42 @@ var imageSrc;
 
 $('#pdf').click(function () {
     //image converet to base 64 open
-    var imageUrl = $('#image').attr('src');
+    var imageUrl[i];
+        imageUrl[0] = $('#image').attr('src');
+        imageUrl[1] = $('#image1').attr('src');
+        imageUrl[2] = $('#image2').attr('src');
+        imageUrl[3] = $('#image3').attr('src');
 
-    console.log('imageUrl', imageUrl);    
+
+    //console.log('imageUrl', imageUrl);    
      var dataURL;
-    function convertImgToBase64(url, callback, outputFormat){
-        var canvas = document.createElement('CANVAS');
-        var ctx = canvas.getContext('2d');
-        var img = new Image;
-        img.crossOrigin = 'Anonymous';
-        img.onload = function(){
-            canvas.height = img.height;
-            canvas.width = img.width;
-            ctx.drawImage(img,0,0);
-             dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
-            createPdf();
-            console.log('dataUrl',dataURL);
-            //callback.call(this, dataURL);
-            // Clean up
-            canvas = null; 
-        };       
-        img.src = url;         
-    }
+     //var img
+     for(var i=0,i<imageUrl.length,i++)
+     {
+        function convertImgToBase64(url, callback, outputFormat)
+        {
+            var canvas = document.createElement('CANVAS');
+            var ctx = canvas.getContext('2d');
+            var img = new Image;
+            img.crossOrigin = 'Anonymous';
+            img.onload = function()
+            {
+                  canvas.height = img.height;
+                  canvas.width = img.width;
+                  ctx.drawImage(img,0,0);
+                  dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+                //createPdf();
+                    console.log('dataUrl',dataURL);
+                //callback.call(this, dataURL);
+                // Clean up
+                    canvas = null; 
+             };       
+                img.src = imageUrl[i];         
+        }
+     }
+    
     convertImgToBase64(imageUrl); 
+    createPdf();
     // image convert base64 close
     function createPdf() {
         //console.log('dataUrl in createPdf',dataURL);
