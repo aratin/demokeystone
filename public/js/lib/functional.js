@@ -27,10 +27,7 @@ $(document).ready(function(){
         for(var i=0; i< imageArr.length; i++) {
             convertImgToBase64(imageArr[i]);           
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
-        }
-        if (dataURLArr.length > 0) {
-            createPdf();
-        }
+        }       
         
         //var data = $('#content-box').html();
         console.log('imageUrl', imageUrl);   
@@ -59,7 +56,7 @@ $(document).ready(function(){
         function createPdf() {
             //console.log('dataUrl in createPdf',dataURL);
             var doc = new jsPDF();
-            console.log(imageSrc);
+           // console.log(imageSrc);
             var imgData;
             for (var i=0; i<dataURLArr.length; i++) {
                 imgData = dataURLArr[i];
@@ -72,5 +69,8 @@ $(document).ready(function(){
                        // doc.setFontSize(40);
             //doc.text(10, 20, data);
         };
+        if (dataURLArr.length > 0) {
+            createPdf();
+        }
     });
 }); 
