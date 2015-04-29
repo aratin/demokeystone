@@ -19,7 +19,7 @@ $(document).ready(function(){
     $('#pdf').click(function () {
         //image converet to base 64 open
         var imageUrl = $('#image').attr('src');
-        var data = $('#content-box').html();
+        //var data = $('#content-box').html();
         console.log('imageUrl', imageUrl);   
         
         function convertImgToBase64(url, callback, outputFormat){
@@ -47,11 +47,11 @@ $(document).ready(function(){
             console.log(imageSrc);
             var imgData = dataURL;
            // doc.setFontSize(40);
-            doc.text(10, 20, data);
+            //doc.text(10, 20, data);
             doc.addImage(imgData, 'JPEG', 15, 15, 40, 40);
-            /*doc.fromHTML($('.content-box').html(), 15, 15, {
+            doc.fromHTML($('#content-box').html(), 15, 15, {
                 'width': 170,'elementHandlers': specialElementHandlers
-            });*/
+            });
             doc.save('sample-file.pdf');
         };
     });
