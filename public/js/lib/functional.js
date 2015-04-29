@@ -25,11 +25,11 @@ $(document).ready(function(){
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
-            convertImgToBase64(imageArr[i]);
-            if (dataURLArr.length > 0) {
-                createPdf();
-            }
+            convertImgToBase64(imageArr[i]);           
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
+        }
+        if (dataURLArr.length > 0) {
+            createPdf();
         }
         
         //var data = $('#content-box').html();
