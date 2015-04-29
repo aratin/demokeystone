@@ -25,18 +25,21 @@ $(document).ready(function(){
 
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
+        //trim the imageArray to remove undefined if less than 4 images.
         for(var i=0; i< imageArr.length; i++) {
             if(imageArr[i] == 'undefined' || imageArr[i] == null) {
                 var index = imageArr.indexOf(imageArr[i]);
                 if (index > -1) {
                     imageArr.splice(index, 1);
                 }               
-            } else {
-                convertImgToBase64(imageArr[i], i);
-            }            
+            }
+        }
+        for (var i=0; i< imageArr.length; i++) {
+            convertImgToBase64(imageArr[i], i); // pass index of current element
+        }            
             //createPdf();
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
-        }       
+               
         
         //var data = $('#content-box').html();
         console.log('imageUrl', imageUrl);   
@@ -53,7 +56,7 @@ $(document).ready(function(){
                 ctx.drawImage(img,0,0);
                 dataURL = canvas.toDataURL('image/jpeg');
                 dataURLArr.push(dataURL);
-                if(imageCount == 3) {
+                if(imageCount == imageArr.length-1) { // check if it is last index of array
                     createPdf();
                 }
                 console.log('dataUrl',dataURL);
