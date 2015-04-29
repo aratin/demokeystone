@@ -43,7 +43,7 @@ $(document).ready(function(){
                 canvas.height = img.height;
                 canvas.width = img.width;
                 ctx.drawImage(img,0,0);
-                dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+                dataURL = canvas.toDataURL('image/jpeg');
                 dataURLArr.push(dataURL);
                 if(imageCount == 3) {
                     createPdf();
