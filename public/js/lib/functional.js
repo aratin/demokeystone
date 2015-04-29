@@ -23,9 +23,10 @@ $(document).ready(function(){
         var imageUrl2 = $('#image2').attr('src');
         var imageUrl3 = $('#image3').attr('src');
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
+        var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
             convertImgToBase64(imageArr[i]);
-            console.log(dataURL + "" + "" + "num" + i);
+            console.log(dataURLArr[i] + "" + "" + "num" + i);
         }
         
         //var data = $('#content-box').html();
@@ -36,18 +37,20 @@ $(document).ready(function(){
             var ctx = canvas.getContext('2d');
             var img = new Image;
             img.crossOrigin = 'Anonymous';
+            img.src = url;
             img.onload = function(){
                 canvas.height = img.height;
                 canvas.width = img.width;
                 ctx.drawImage(img,0,0);
                 dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+                dataURLArr.push(dataURL);
                 //createPdf();
                 console.log('dataUrl',dataURL);
                 //callback.call(this, dataURL);
                 // Clean up
                 canvas = null; 
-            };       
-            img.src = url;         
+            };    
+                    
         }
                 // image convert base64 close
         function createPdf() {
