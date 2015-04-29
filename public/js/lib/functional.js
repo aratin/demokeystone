@@ -25,8 +25,9 @@ $(document).ready(function(){
 
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
+        var precount = imageArr.length; 
         //trim the imageArray to remove undefined if less than 4 images.
-        for(var i=0; i< imageArr.length; i++) {
+        for(var i=0; i< precount; i++) {
             if(imageArr[i] == 'undefined' || imageArr[i] == null) {
                 var index = imageArr.indexOf(imageArr[i]);
                 if (index > -1) {
