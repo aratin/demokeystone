@@ -25,17 +25,15 @@ $(document).ready(function(){
         var imageArr = [imageUrl,imageUrl1,imageUrl2,imageUrl3];
         var dataURLArr = [];
         for(var i=0; i< imageArr.length; i++) {
-            convertImgToBase64(imageArr[i]);
-            if(i==imageArr.length-1) {
-                createPdf();
-            }          
+            convertImgToBase64(imageArr[i], i);            
+            //createPdf();
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
         }       
         
         //var data = $('#content-box').html();
         console.log('imageUrl', imageUrl);   
         
-        function convertImgToBase64(url, callback, outputFormat){
+        function convertImgToBase64(url, imageCount){
             var canvas = document.createElement('CANVAS');
             var ctx = canvas.getContext('2d');
             var img = new Image;
@@ -47,7 +45,9 @@ $(document).ready(function(){
                 ctx.drawImage(img,0,0);
                 dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
                 dataURLArr.push(dataURL);
-                //createPdf();
+                if(imageCount == 3) {
+                    createPdf();
+                }
                 console.log('dataUrl',dataURL);
                 //callback.call(this, dataURL);
                 // Clean up
