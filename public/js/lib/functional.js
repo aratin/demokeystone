@@ -28,7 +28,7 @@ $('#pdf').click(function () {
     //console.log('imageUrl', imageUrl);    
      var dataURL;
      //var img
-     for(var i=0,i<imageUrl.length,i++)
+     for(var i=0,i<imageUrl[i].length,i++)
      {
         function convertImgToBase64(url, callback, outputFormat)
         {
