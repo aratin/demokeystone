@@ -25,7 +25,7 @@ block content
               .row
                 .col-md-4
                   if data.healthcareinsurers.length
-                        img(id="image",src=data.healthcareinsurers[0].images.limit(640,640))
+                        img(id="image",src=data.healthcareinsurers[0].images.limit(640,640),rel='Healthcareinsurer')
                 .col-md-8
                     p
                       | #{data.healthcareinsurers[0].longText}
