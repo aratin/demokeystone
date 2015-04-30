@@ -33,3 +33,4 @@ require('./healthcareprovider');
 require('./employer');
 require('./pharmaceutical');
 require('./researchinstitute');
+require('./lifestyleindustry');

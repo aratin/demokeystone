@@ -84,6 +84,8 @@ exports = module.exports = function(app) {
 	app.all('/employer', routes.views.employer);
 	app.all('/pharmaceutical', routes.views.pharmaceutical);
 	app.all('/researchinstitute', routes.views.researchinstitute);
+	app.all('/lifestyleindustry', routes.views.lifestyleindustry);
+
 
 	
 	// Downloads
