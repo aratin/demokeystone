@@ -85,7 +85,7 @@ exports = module.exports = function(app) {
 	app.all('/pharmaceutical', routes.views.pharmaceutical);
 	app.all('/researchinstitute', routes.views.researchinstitute);
 	app.all('/lifestyleindustry', routes.views.lifestyleindustry);
-
+	app.all('/crm', routes.views.crm);
 
 	
 	// Downloads
