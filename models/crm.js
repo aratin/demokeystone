@@ -8,9 +8,9 @@ var Crm = new keystone.List('Crm', {
 Crm.add({
 	//consultingService:{type:String},
 	image:{ type: Types.CloudinaryImage},
-	wysiwygHtml: { type: Types.Html, wysiwyg: true },
+	wysiwygHtml: { type: Types.Html, wysiwyg: false },
 	shortWysiwygField: { type: Types.Html, wysiwyg: true, height: 100 },
-	embedSrc: { type: String }
+	html: { type: Types.Html }
 });
 
 /** 
