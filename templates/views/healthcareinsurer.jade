@@ -25,11 +25,7 @@ block content
               .row
                 .col-md-4
                   if data.healthcareinsurers.length
-                    .msp-images
-                      if data.healthcareinsurers[0].image.exists
-                        .row
-                          .col-xs-12
-                              img(src=data.healthcareinsurers[0]._.image.limit(640,640))
+                        img(id="image",src=data.healthcareinsurers[0]._.image.limit(640,640))
                 .col-md-8
                     p
                       | #{data.healthcareinsurers[0].longText}
