@@ -25,10 +25,23 @@ block content
               .row
                 .col-md-4
                   if data.healthcareproviders.length
-                        img(id="image",src=data.healthcareproviders[0].images.limit(640,640))
+                    .msp-images
+                      if data.healthcareproviders[0].image.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.healthcareproviders[0]._.image.limit(900,600),rel='Healthcareprovider').msp-image
+                              img(src=data.healthcareproviders[0]._.image.limit(640,640))
                 .col-md-8
                     p
-                      | #{data.healthcareproviders[0].longText}
+                      | #{data.healthcareproviders[0].text}
+                    p
+                      | #{data.healthcareproviders[0].subText}
+                    p
+                      | #{data.healthcareproviders[0].shortText}
+                    p
+                      | #{data.healthcareproviders[0].subString}
+                    p
+                      | #{data.healthcareproviders[0].shortString}
             include ../views/listingmenu
       .container-fluid
         .row

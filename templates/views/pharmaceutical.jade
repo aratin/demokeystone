@@ -25,10 +25,13 @@ block content
               .row
                 .col-md-4
                   if data.pharmaceuticals.length
-                        img(id="image",src=data.pharmaceuticals[0].images.limit(640,640))
+                    .msp-images
+                      if data.pharmaceuticals[0].image.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.pharmaceuticals[0]._.image.limit(900,600),rel='Pharmaceutical').msp-image
+                              img(src=data.pharmaceuticals[0]._.image.limit(640,640))
                 .col-md-8
-                    p
-                      | #{data.pharmaceuticals[0].longText}
             include ../views/listingmenu
       .container-fluid
         .row

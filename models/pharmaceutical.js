@@ -7,8 +7,7 @@ var Pharmaceutical = new keystone.List('Pharmaceutical', {
 
 Pharmaceutical.add({
 	
-	images:{ type: Types.CloudinaryImage,publicID: 'slug'},
-	longText: { type: Types.Textarea, initial: true },
+	image:{ type: Types.CloudinaryImage}
 });
 
 /** 

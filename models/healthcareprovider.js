@@ -7,8 +7,12 @@ var Healthcareprovider = new keystone.List('Healthcareprovider', {
 
 Healthcareprovider.add({
 	
-	images:{ type: Types.CloudinaryImage,publicID: 'slug'},
-	longText: { type: Types.Textarea, initial: true },
+	image:{ type: Types.CloudinaryImage},
+	text: { type: String },
+	subText: { type: String },
+	shortText: { type: String },
+	subString: { type: String },
+	shortString: { type: String },
 });
 
 /** 
