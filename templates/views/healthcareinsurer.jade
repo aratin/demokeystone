@@ -25,8 +25,8 @@ block content
               .row
                 .col-md-4
                   if data.healthcareinsurers.length
-                      if data.healthcareinsurers[0].images.exists
-                        img(id="image",src=data.healthcareinsurers[0].images.limit(640,640),rel='Healthcareinsurer')
+                      if data.healthcareinsurers[0].image.exists
+                        img(id="image",src=data.healthcareinsurers[0].image.limit(640,640),rel='Healthcareinsurer')
                 .col-md-8
                     p
                       | #{data.healthcareinsurers[0].longText}
