@@ -79,6 +79,11 @@ exports = module.exports = function(app) {
 	app.all('/marketresearch', routes.views.marketresearch);
 	app.all('/tibcospotfirecustom', routes.views.tibcospotfirecustom);
 	app.all('/readmore', routes.views.readmore);
+	app.all('/healthcareinsurer', routes.views.healthcareinsurer);
+	app.all('/healthcareprovider', routes.views.healthcareprovider);
+	app.all('/employer', routes.views.employer);
+	app.all('/pharmaceutical', routes.views.pharmaceutical);
+	  
 
 	
 	// Downloads

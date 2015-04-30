@@ -28,3 +28,8 @@ require('./tibcospotfire');
 require('./tibcospotfirecustom');
 require('./marketresearch');
 require('./readmore');
+require('./healthcareinsurer');
+require('./healthcareprovider');
+require('./employer');
+require('./pharmaceutical');
+    
