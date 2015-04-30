@@ -25,12 +25,7 @@ block content
               .row
                 .col-md-4
                   if data.pharmaceuticals.length
-                    .msp-images
-                      if data.pharmaceuticals[0].image.exists
-                        .row
-                          .col-xs-12
-                            a(href=data.pharmaceuticals[0]._.image.limit(900,600),rel='Pharmaceutical').msp-image
-                              img(src=data.pharmaceuticals[0]._.image.limit(640,640))
+                        img(id="image",src=data.pharmaceuticals[0]._.image.limit(640,640))
                 .col-md-8
             include ../views/listingmenu
       .container-fluid
