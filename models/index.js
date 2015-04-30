@@ -32,4 +32,4 @@ require('./healthcareinsurer');
 require('./healthcareprovider');
 require('./employer');
 require('./pharmaceutical');
-    
+require('./researchinstitute');

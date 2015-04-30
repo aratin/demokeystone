@@ -24,11 +24,15 @@ block content
             .col-md-9
               .row
                 .col-md-4
-                  if data.employers.length
-                        img(id="image",src=data.employers[0].image.limit(640,640))
+                  if data.researchinstitutes.length
+                        img(id="image",src=data.researchinstitutes[0]._.image.limit(640,640))
                 .col-md-8
                     p
-                      | #{data.employers[0].longText}
+                      | #{data.researchinstitutes[0].text}
+                    p
+                      | #{data.researchinstitutes[0].subText}
+                    p
+                      | #{data.researchinstitutes[0].shortText}
             include ../views/listingmenu
       .container-fluid
         .row
