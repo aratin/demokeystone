@@ -9,6 +9,9 @@ Employer.add({
 	
 	images:{ type: Types.CloudinaryImage,publicID: 'slug'},
 	longText: { type: Types.Textarea, initial: true },
+	subText :{type:Types.html};
+	shortText :{type:Types.html};
+	subString:{type:Types.html};
 });
 
 /** 
