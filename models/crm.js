@@ -9,7 +9,7 @@ Crm.add({
 	//consultingService:{type:String},
 	image:{ type: Types.CloudinaryImage},
 	//wysiwygHtml: { type: Types.Html, wysiwyg: false },
-	shortWysiwygField: { type: Types.Html, wysiwyg: true, height: 100 },
+	shortWysiwygField: { type: Types.Html, wysiwyg: false, height: 100 },
 	html: { type: Types.Html },
 	// subText: { type: Types.Html },
 	// shortString: { type: Types.Html },
