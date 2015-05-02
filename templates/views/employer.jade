@@ -25,14 +25,15 @@ block content
               .row
                 .col-md-4
                   if data.employers.length
-                    .msp-images
-                      if data.employers[0].image.exists
-                        .row
-                          .col-xs-12
-                              img(id="image",src=data.employers[0]._.image.limit(640,640))
+                        img(id="image",src=data.employers[0]._.image.limit(640,640))
                 .col-md-8
                     p
                       | #{data.employers[0].longText}
+                    p
+                      | #{data.employers[0].html}
+                    p
+                      | #{data.employers[0].subhtml}
+
             include ../views/listingmenu
       .container-fluid
         .row
