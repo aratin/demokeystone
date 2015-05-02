@@ -7,9 +7,9 @@ var Employer = new keystone.List('Employer', {
 
 Employer.add({
 	
-	images:{ type: Types.CloudinaryImage,publicID: 'slug'},
+	image:{ type: Types.CloudinaryImage},
 	longText: { type: Types.Textarea, initial: true },
-	
+
 });
 
 /** 
