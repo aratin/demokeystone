@@ -25,7 +25,11 @@ block content
               .row
                 .col-md-4
                   if data.employers.length
-                        img(id="image",src=data.employers[0].image.limit(640,640))
+                    .msp-images
+                      if data.employers[0].image.exists
+                        .row
+                          .col-xs-12
+                              img(id="image",src=data.employers[0]._.image.limit(640,640))
                 .col-md-8
                     p
                       | #{data.employers[0].longText}
