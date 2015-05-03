@@ -22,15 +22,18 @@ block content
                   a(href="/message")
                     i.fa.fa-lg.fa-envelope
             .col-md-9
-              .col-md-8
+              .row
+                .col-md-4
+                  if data.predictivemodelings.length
+                      if data.predictivemodelings[0].image.exists
+                        img(id="image",src=data.predictivemodelings[0]._.image.limit(640,640))
+                .col-md-8
                   p 
                     | #{data.predictivemodelings[0].text}
                   p  
                     | #{data.predictivemodelings[0].subText}
                   p
                     | #{data.predictivemodelings[0].shortString}
-                  p
-                    | #{data.predictivemodelings[0].longString}
             include ../views/companyinfolistmenu
       .container-fluid
         .row

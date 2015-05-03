@@ -6,6 +6,7 @@ var Predictivemodeling = new keystone.List('Predictivemodeling', {
 });
 
 Predictivemodeling.add({
+	image:{type:Types.CloudinaryImage},
 	text:{type:String},
 	subText:{ type: Types.Textarea, initial: true },
 	shortString:{ type: Types.Textarea, initial: true },
