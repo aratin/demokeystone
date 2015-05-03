@@ -36,4 +36,7 @@ require('./researchinstitute');
 require('./lifestyleindustry');
 require('./crm');
 require('./lawenforcement');
+require('./datawarehouse');
+require('./businessintelligence');
+require('./predictivemodeling');
 
