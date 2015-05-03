@@ -87,7 +87,7 @@ exports = module.exports = function(app) {
 	app.all('/lifestyleindustry', routes.views.lifestyleindustry);
 	app.all('/crm', routes.views.crm);
 	app.all('/lawenforcement', routes.views.lawenforcement);
-	app.all('/dataware-house', routes.views.datawarehouse);
+	app.all('/data-warehouse', routes.views.datawarehouse);
 	app.all('/business-intelligence', routes.views.businessintelligence);
 	app.all('/predictive-modeling', routes.views.predictivemodeling);
 
