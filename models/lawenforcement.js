@@ -9,10 +9,12 @@ Lawenforcement.add({
 	text: {type: Types.Textarea, initial: true },
 	image: {type:Types.CloudinaryImage},
 	shortText: {type:String },
-	subImage: {type:Types.CloudinaryImage},
 	longText: {type: Types.Textarea, initial: true },
-	//shortSubText: {type:String },
-	//longSubText: {type: Types.Textarea, initial: true },
+	subImage: {type:Types.CloudinaryImage},
+	
+	
+});
+
 /** 
 	Registration
 	============
