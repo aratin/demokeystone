@@ -9,7 +9,7 @@ Predictivemodeling.add({
 	text:{type:String},
 	subText:{ type: Types.Textarea, initial: true },
 	shortString:{ type: Types.Textarea, initial: true },
-	longString:{ type: Types.Textarea, initial: true },
+	
 });
 
 /** 
