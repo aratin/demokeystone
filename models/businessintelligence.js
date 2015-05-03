@@ -11,6 +11,10 @@ Businessintelligence.add({
 	subText:{ type: Types.Textarea, initial: true },
 	shortString:{ type: Types.Textarea, initial: true },
 	longString:{ type: Types.Textarea, initial: true },
+	shortsubString:{ type: Types.Textarea, initial: true },
+	longsubString:{ type: Types.Textarea, initial: true },
+
+
 });
 
 /** 

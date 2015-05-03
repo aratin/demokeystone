@@ -19,18 +19,28 @@ block content
                     i.fa.fa-lg.fa-file-pdf-o
                 li
                 li
-                  a(href="/message")
+                  a(href="/contactform")
                     i.fa.fa-lg.fa-envelope
             .col-md-9
               .col-md-8
                   p 
                     | #{data.businessintelligences[0].text}
+                    br
                   p  
                     | #{data.businessintelligences[0].subText}
+                    br
                   p
                     | #{data.businessintelligences[0].shortString}
+                    br
                   p
                     | #{data.businessintelligences[0].longString}
+                    br
+                  p
+                    | #{data.businessintelligences[0].shortsubString}
+                    br
+                  p
+                    | #{data.businessintelligences[0].longsubString}
+                    
             include ../views/companyinfolistmenu
       .container-fluid
         .row
