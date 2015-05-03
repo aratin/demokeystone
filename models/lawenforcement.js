@@ -11,8 +11,8 @@ Lawenforcement.add({
 	shortText: {type:String },
 	subImage: {type:Types.CloudinaryImage},
 	longText: {type: Types.Textarea, initial: true },
-	shortSubText: {type:String },
-	longSubText: {type: Types.Textarea, initial: true },
+	//shortSubText: {type:String },
+	//longSubText: {type: Types.Textarea, initial: true },
 /** 
 	Registration
 	============
