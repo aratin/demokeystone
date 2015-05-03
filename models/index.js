@@ -35,3 +35,5 @@ require('./pharmaceutical');
 require('./researchinstitute');
 require('./lifestyleindustry');
 require('./crm');
+require('./lawenforcement');
+
