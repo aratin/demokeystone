@@ -16,7 +16,7 @@ exports = module.exports = function(req, res) {
 
 	// Load the current lawenforcement
 	view.on('init', function(next) {
-		var q = Employer.model.find();
+		var q = Lawenforcement.model.find();
 		q.exec(function(err, results) {
 			locals.data.lawenforcements = results;
 			next(err);
