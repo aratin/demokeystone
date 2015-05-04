@@ -3,7 +3,7 @@ var Geospatialanalytic = keystone.list('Geospatialanalytic');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-var Consultingservicesubmenu = keystone.list('Consultingservicesubmenu');
+var Listingmenu = keystone.list('Listingmenu');
 //var Message = keystone.list('Message');
 
 
@@ -51,11 +51,11 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current Consultingservicesubmenu
+	// Load the current ListingMenu
 	view.on('init', function(next) {
-		var q = Consultingservicesubmenu.model.find();
+		var q = Listingmenu.model.find();
 		q.exec(function(err, results) {
-			locals.data.consultingservicesubmenus = results;
+			locals.data.listingmenus = results;
 			next(err);
 		});
 	});
