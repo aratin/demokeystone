@@ -3,7 +3,7 @@ var Socialmediaanalyse = keystone.list('Socialmediaanalyse');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-var CompanyInfoListMenu = keystone.list('CompanyInfoListMenu');
+var Consultingservicesubmenu = keystone.list('Consultingservicesubmenu');
 //var Message = keystone.list('Message');
 
 
@@ -51,11 +51,11 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current CompanyInfoListMenu
+	// Load the current Consultingservicesubmenu
 	view.on('init', function(next) {
-		var q = CompanyInfoListMenu.model.find();
+		var q = Consultingservicesubmenu.model.find();
 		q.exec(function(err, results) {
-			locals.data.companyinfolistmenus = results;
+			locals.data.consultingservicesubmenus = results;
 			next(err);
 		});
 	});

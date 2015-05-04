@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Datawarehouse = keystone.list('Datawarehouse');
-var Listingmenu = keystone.list('Listingmenu');
+var Consultingservicesubmenu = keystone.list('Consultingservicesubmenu');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
@@ -50,11 +50,11 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current ListingMenu
+	// Load the current Consultingservicesubmenu
 	view.on('init', function(next) {
-		var q = Listingmenu.model.find();
+		var q = Consultingservicesubmenu.model.find();
 		q.exec(function(err, results) {
-			locals.data.listingmenus = results;
+			locals.data.consultingservicesubmenus = results;
 			next(err);
 		});
 	});
