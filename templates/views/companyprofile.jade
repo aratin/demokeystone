@@ -25,11 +25,8 @@ block content
               .row
                 .col-md-4
                   if data.companyprofiles.length
-                    .msp-images
-                      if data.companyprofiles[0].companyProfileimage.exists
-                        .row
-                          .col-xs-12
-                              img(id="image",src=data.companyprofiles[0]._.companyProfileimage.limit(640,640))
+                      if data.companyprofiles[0].image.exists
+                        img(id="image",src=data.companyprofiles[0]._.image.limit(640,640))
                 .col-md-8
                   p
                     | #{data.companyprofiles.companyProfiletext}
