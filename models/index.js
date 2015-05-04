@@ -39,4 +39,11 @@ require('./lawenforcement');
 require('./datawarehouse');
 require('./businessintelligence');
 require('./predictivemodeling');
+require('./businessprocessstrategy');
+require('./comparativebenchmarking');
+require('./ecommerceportal');
+require('./geospatialanalytic');
+require('./informationreportingstrategy');
+require('./socialmediaanalyse');
+
 

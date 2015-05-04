@@ -90,7 +90,12 @@ exports = module.exports = function(app) {
 	app.all('/data-warehouse', routes.views.datawarehouse);
 	app.all('/businessintelligence', routes.views.businessintelligence);
 	app.all('/predictive-modeling', routes.views.predictivemodeling);
-
+	app.all('/business-process-strategy', routes.views.businessprocessstrategy);
+	app.all('/comparative-benchmarking', routes.views.comparativebenchmarking);
+	app.all('/ecommerce-portal', routes.views.ecommerceportal);
+	app.all('/geo-spatial-analytic', routes.views.geospatialanalytic);
+	app.all('/information-reporting-strategy', routes.views.informationreportingstrategy);
+	app.all('/social-media-analysis', routes.views.socialmediaanalyse);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);

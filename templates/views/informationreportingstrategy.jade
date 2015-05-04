@@ -24,23 +24,23 @@ block content
             .col-md-9
               .row
                 .col-md-4
-                  if data.comparativebenchmarkings.length
-                      if data.comparativebenchmarkings[0].image.exists
-                          img(id="image",src=data.comparativebenchmarkings[0]._.image.limit(640,640))
+                  if data.informationreportingstrategys.length
+                      if data.informationreportingstrategys[0].image.exists
+                          img(id="image",src=data.informationreportingstrategys[0]._.image.limit(640,640))
                 .col-md-8
                     p
-                      | #{data.comparativebenchmarkings[0].text}
+                      | #{data.informationreportingstrategys[0].text}
                     p
-                      | #{data.comparativebenchmarkings[0].subText}
+                      | #{data.informationreportingstrategys[0].subText}
                     p
-                      | #{data.comparativebenchmarkings[0].shortString}
+                      | #{data.informationreportingstrategys[0].shortString}
                     p
-                      | #{data.comparativebenchmarkings[0].longString}
+                      | #{data.informationreportingstrategys[0].longString}
                     p
-                      | #{data.comparativebenchmarkings[0].subString}
+                      | #{data.informationreportingstrategys[0].subString}
                     p
-                      | #{data.comparativebenchmarkings[0].subStringText}
-      .container-fluid 
+                      | #{data.informationreportingstrategys[0].subStringText}
+      .container-fluid
         .row
           footer
             include ../views/footer
