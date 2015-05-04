@@ -96,6 +96,7 @@ exports = module.exports = function(app) {
 	app.all('/geo-spatial-analytic', routes.views.geospatialanalytic);
 	app.all('/information-reporting-strategy', routes.views.informationreportingstrategy);
 	app.all('/social-media-analysis', routes.views.socialmediaanalyse);
+	app.all('/consultingservicesubmenu', routes.views.consultingservicesubmenu);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);

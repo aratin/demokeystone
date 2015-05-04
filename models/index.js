@@ -18,6 +18,7 @@ require('./partner');
 require('./softwareproduct');
 require('./listingmenu');
 require('./consultingservice');
+require('./consultingservicesubmenu');
 require('./msp');
 require('./specializedanalyse');
 require('./offering');
