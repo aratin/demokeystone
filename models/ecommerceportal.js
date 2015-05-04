@@ -11,8 +11,6 @@ Ecommerceportal.add({
 	subText:{type:String}, 
 	shortString:{type:String},
 	longString:{type:String},
-	subString:{type:String},
-	subStringText:{type:String},
 	
 });
 
