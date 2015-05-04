@@ -6,13 +6,10 @@ var Informationreportingstrategy = new keystone.List('Informationreportingstrate
 });
 
 Informationreportingstrategy.add({
-	image:{ type: Types.CloudinaryImage},
 	text:{type:String},
 	subText:{type:String}, 
 	shortString:{type:String},
 	longString:{type:String},
-	subString:{type:String},
-	subStringText:{type:String},
 	
 });
 

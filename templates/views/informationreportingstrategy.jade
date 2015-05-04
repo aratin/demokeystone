@@ -22,24 +22,18 @@ block content
                   a(href="/message")
                     i.fa.fa-lg.fa-envelope
             .col-md-9
-              .row
-                .col-md-4
-                  if data.informationreportingstrategys.length
-                      if data.informationreportingstrategys[0].image.exists
-                          img(id="image",src=data.informationreportingstrategys[0]._.image.limit(640,640))
                 .col-md-8
                     p
                       | #{data.informationreportingstrategys[0].text}
+                      br
                     p
                       | #{data.informationreportingstrategys[0].subText}
+                      br
                     p
                       | #{data.informationreportingstrategys[0].shortString}
+                      br
                     p
                       | #{data.informationreportingstrategys[0].longString}
-                    p
-                      | #{data.informationreportingstrategys[0].subString}
-                    p
-                      | #{data.informationreportingstrategys[0].subStringText}
       .container-fluid
         .row
           footer
