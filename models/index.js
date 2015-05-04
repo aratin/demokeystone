@@ -46,5 +46,5 @@ require('./ecommerceportal');
 require('./geospatialanalytic');
 require('./informationreportingstrategy');
 require('./socialmediaanalyse');
-
+require('./footermenunavigation');
 

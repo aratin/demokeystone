@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Researchinstitute = keystone.list('Researchinstitute');
-var Listingmenu = keystone.list('Listingmenu');
+var Footermenunavigation = keystone.list('Footermenunavigation');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
@@ -50,15 +50,14 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current ListingMenu
+	// Load Current Footermenunavigation
 	view.on('init', function(next) {
-		var q = Listingmenu.model.find();
+		var q = Footermenunavigation.model.find();
 		q.exec(function(err, results) {
-			locals.data.listingmenus = results;
+			locals.data.footermenunavigations = results;
 			next(err);
 		});
 	});
-
 	// Load the current Message
 	// view.on('init', function(next) {
 	// 	var q = Message.model.find();
