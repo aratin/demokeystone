@@ -12,7 +12,7 @@ Companyprofile.add({
 	companyProfileshortstring: { type: String },
 	companyProfilelongstring: { type: String },
 	companyProfilesubstring: { type: String },
-	companyProfilesubstringtext: { type: String }
+	companyProfilesubstringtext: { type: String },
 });
 
 /** 
