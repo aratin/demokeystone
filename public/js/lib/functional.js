@@ -14,6 +14,7 @@ $(document).ready(function(){
         '#editor': function (element,renderer) {
             return true;
         }
+
     };
 
     $('#pdf').click(function () {
@@ -71,23 +72,27 @@ $(document).ready(function(){
         function createPdf() {
             //console.log('dataUrl in createPdf',dataURL);
             if (dataURLArr.length > 0) {
-                var doc = new jsPDF();
+                var doc = new jsPDF('p','pt','a4');
                // console.log(imageSrc);
                 var imgData;
                 for (var i=0; i<dataURLArr.length; i++) {
                     imgData = dataURLArr[i];
-                    doc.addImage(imgData, 'JPEG', 15*(i+1), 15*(i+1), 40, 40);
-                }         
-                doc.fromHTML($('#content-box').html(), 15, 15, {
-                    'width': 170,'elementHandlers': specialElementHandlers
+                    doc.addImage(imgData, 'JPEG', 15, 70*(i+1), 50, 40);
+                }   
+
+                // margins = {
+                //     top: 20,
+                //     bottom: 20,
+                //     left: 20,
+                //     width: '100%'
+                // };
+                doc.setFontSize(20);
+                //$('#content-data').html()
+                doc.fromHTML($('#content-data').html(), 80,30,  {
+                    'width': 450,'elementHandlers': specialElementHandlers
                 });
                 doc.save('sample-file.pdf');
             }
-                           // doc.setFontSize(40);
-            //doc.text(10, 20, data);
         };
-        ///if (dataURLArr.length > 0) {
-            
-        //}
     });
 }); 
