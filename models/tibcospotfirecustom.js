@@ -6,6 +6,7 @@ var Tibcospotfirecustom = new keystone.List('Tibcospotfirecustom', {
 });
 
 Tibcospotfirecustom.add({
+	image: { type: Types.CloudinaryImage},
 	longText: { type: String },
 	
 });

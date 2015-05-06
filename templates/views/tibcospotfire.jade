@@ -22,6 +22,9 @@ block content
             .col-md-9
               .row
                 .col-md-4
+                  if data.tibcospotfires.length
+                      if data.tibcospotfires[0].image.exists
+                        img(id="image",src=data.tibcospotfires[0]._.image.limit(640,640))
                 .col-md-8
                   p
                     | #{data.tibcospotfires[0].longText}
