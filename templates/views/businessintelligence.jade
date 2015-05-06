@@ -20,25 +20,14 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9
-              .col-md-8
+              .row
+                .col-md-4
+                  if data.businessintelligences.length
+                      if data.businessintelligences[0].image.exists
+                        img(id="image",src=data.businessintelligences[0]._.image.limit(640,640))
+                .col-md-8
                   p 
-                    | #{data.businessintelligences[0].text}
-                    br
-                  p  
-                    | #{data.businessintelligences[0].subText}
-                    br
-                  p
-                    | #{data.businessintelligences[0].shortString}
-                    br
-                  p
-                    | #{data.businessintelligences[0].longString}
-                    br
-                  p
-                    | #{data.businessintelligences[0].shortsubString}
-                    br
-                  p
-                    | #{data.businessintelligences[0].longsubString}
-                    
+                    | #{data.businessintelligences[0].longText}
             include ../views/listingmenu
       .container-fluid
         .row
