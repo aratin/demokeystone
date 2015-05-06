@@ -79,7 +79,7 @@ $(document).ready(function(){
                     imgData = dataURLArr[i];
                    doc.addImage(imgData, 'JPEG', 15, 70*(i+1), 50, 40);
                 }   
-                doc.fromHTML($('#content-box').html(), 80,30,  {
+                doc.fromHTML($('#content-data').html(), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
                 });
                 doc.save('sample-file.pdf');
