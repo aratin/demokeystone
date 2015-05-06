@@ -7,12 +7,12 @@ var Companyprofile = new keystone.List('Companyprofile', {
 
 Companyprofile.add({
 	image: { type: Types.CloudinaryImage},
-	companyProfiletext: {type: String},
-	companyProfilesubtext: {type: String},
-	companyProfileshortstring: { type: String },
-	companyProfilelongstring: { type: String },
-	companyProfilesubstring: { type: String },
-	companyProfilesubstringtext: { type: String },
+	text: {type: String},
+	// companyProfilesubtext: {type: String},
+	// companyProfileshortstring: { type: String },
+	// companyProfilelongstring: { type: String },
+	// companyProfilesubstring: { type: String },
+	// companyProfilesubstringtext: { type: String },
 });
 
 /** 

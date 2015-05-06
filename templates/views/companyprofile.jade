@@ -27,17 +27,17 @@ block content
                           img(id="image",src=data.companyprofiles[0]._.image.limit(640,640))
                 .col-md-8
                     p
-                      | #{data.companyprofiles[0].companyProfiletext}
-                    p
-                      | #{data.companyprofiles[0].companyProfilesubtext}
-                    p
-                      | #{data.companyprofiles[0].companyProfileshortstring}
-                    p
-                      | #{data.companyprofiles[0].companyProfilelongstring}
-                    p
-                      | #{data.companyprofiles[0].companyProfilesubstring}
-                    p
-                      | #{data.companyprofiles[0].companyProfilesubstringtext}
+                      | #{data.companyprofiles[0].text}
+                    //- p
+                    //-   | #{data.companyprofiles[0].companyProfilesubtext}
+                    //- p
+                    //-   | #{data.companyprofiles[0].companyProfileshortstring}
+                    //- p
+                    //-   | #{data.companyprofiles[0].companyProfilelongstring}
+                    //- p
+                    //-   | #{data.companyprofiles[0].companyProfilesubstring}
+                    //- p
+                    //-   | #{data.companyprofiles[0].companyProfilesubstringtext}
             include ../views/companyinfolistmenu
       .container-fluid
         .row
