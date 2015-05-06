@@ -22,6 +22,9 @@ block content
             .col-md-9
               .row
                 .col-md-4
+                  if data.businessprocessstrategys.length
+                      if data.businessprocessstrategys[0].image.exists
+                        img(id="image",src=data.businessprocessstrategys[0]._.image.limit(640,640))
                 .col-md-8
                   p
                     | #{data.businessprocessstrategys[0].longText}
