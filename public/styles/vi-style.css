@@ -166,7 +166,7 @@ input.form-control, textarea.form-control {width: 50%;}
 	#content-box .offer-box{margin-bottom: 20px;}
 }
 @media (max-width: 360px){
-	/*#footer-box .pdf-list ul li a{top:10px;}/*
+	#footer-box .pdf-list ul li a{top:5px;}
 }
 /***************************************************************************************/
 
