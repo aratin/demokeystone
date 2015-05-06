@@ -88,7 +88,7 @@ $(document).ready(function(){
                 // };
                 doc.setFontSize(20);
                 //$('#content-data').html()
-                doc.fromHTML($('content-box').html(), 80,30,  {
+                doc.fromHTML($('#content-data').html(), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
                 });
                 doc.save('sample-file.pdf');
