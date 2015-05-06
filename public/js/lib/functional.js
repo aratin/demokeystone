@@ -77,17 +77,8 @@ $(document).ready(function(){
                 var imgData;
                 for (var i=0; i<dataURLArr.length; i++) {
                     imgData = dataURLArr[i];
-                    doc.addImage(imgData, 'JPEG', 15, 70*(i+1), 50, 40);
+                   // doc.addImage(imgData, 'JPEG', 15, 70*(i+1), 50, 40);
                 }   
-
-                // margins = {
-                //     top: 20,
-                //     bottom: 20,
-                //     left: 20,
-                //     width: '100%'
-                // };
-                doc.setFontSize(20);
-                //$('#content-data').html()
                 doc.fromHTML($('#content-box').html(), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
                 });
