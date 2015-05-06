@@ -28,16 +28,16 @@ block content
                 .col-md-8
                     p
                       | #{data.companyprofiles[0].text}
-                    //- p
-                    //-   | #{data.companyprofiles[0].companyProfilesubtext}
-                    //- p
-                    //-   | #{data.companyprofiles[0].companyProfileshortstring}
-                    //- p
-                    //-   | #{data.companyprofiles[0].companyProfilelongstring}
-                    //- p
-                    //-   | #{data.companyprofiles[0].companyProfilesubstring}
-                    //- p
-                    //-   | #{data.companyprofiles[0].companyProfilesubstringtext}
+                    p
+                      | #{data.companyprofiles[0].subText}
+                    p
+                      | #{data.companyprofiles[0].shortString}
+                    p
+                      | #{data.companyprofiles[0].longString}
+                    p
+                      | #{data.companyprofiles[0].subString}
+                    p
+                      | #{data.companyprofiles[0].subStringText}
             include ../views/companyinfolistmenu
       .container-fluid
         .row
