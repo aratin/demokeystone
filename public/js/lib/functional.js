@@ -77,7 +77,7 @@ $(document).ready(function(){
                 var imgData;
                 for (var i=0; i<dataURLArr.length; i++) {
                     imgData = dataURLArr[i];
-                   doc.addImage(imgData, 'JPEG', 15, 50*(i+1), 60, 40);
+                   doc.addImage(imgData, 'JPEG', 15, 80*(i+1), 70, 40);
                 }   
                 doc.fromHTML($('#content-data').html(), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
