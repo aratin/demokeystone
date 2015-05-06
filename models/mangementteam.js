@@ -6,6 +6,7 @@ var MangementTeam = new keystone.List('MangementTeam', {
 });
 
 MangementTeam.add({
+	image:{ type: Types.CloudinaryImage},
 	mangementTeamtext: { type: String },
 	mangementTeamsubtext: { type: String },
 	mangementTeamshortstring: { type: Types.Textarea, initial: true },
