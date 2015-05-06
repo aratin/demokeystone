@@ -72,14 +72,15 @@ $(document).ready(function(){
         function createPdf() {
             //console.log('dataUrl in createPdf',dataURL);
             if (dataURLArr.length > 0) {
-                var doc = new jsPDF('p','mm',[297,210],'pt','a4');
+                var doc = new jsPDF('p','mm',[50,50],'pt','a4');
+                doc.setFontSize(14);
                // console.log(imageSrc);
                 var imgData;
                 for (var i=0; i<dataURLArr.length; i++) {
                     imgData = dataURLArr[i];
                    doc.addImage(imgData, 'JPEG', 15, 50*(i+1), 60, 40);
                 }   
-                doc.fromHTML($('#content-data').html(), 80,30,  {
+                doc.fromHTML($('#content-data').html("<div style='color:red;'></div>"), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
                 });
                 doc.save('sample-file.pdf');
