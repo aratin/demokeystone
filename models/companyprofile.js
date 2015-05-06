@@ -12,6 +12,7 @@ Companyprofile.add({
 	shortString: { type: String },
 	longString: { type: String },
 	subString: { type: String },
+	subTextString: { type: String },
 	subStringText: { type: String },
 });
 
