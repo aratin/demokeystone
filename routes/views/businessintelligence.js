@@ -51,7 +51,7 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current ListingMenu
+		// Load the current ListingMenu
 	view.on('init', function(next) {
 		var q = Listingmenu.model.find();
 		q.exec(function(err, results) {
