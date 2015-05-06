@@ -72,7 +72,7 @@ $(document).ready(function(){
         function createPdf() {
             //console.log('dataUrl in createPdf',dataURL);
             if (dataURLArr.length > 0) {
-                var doc = new jsPDF('p','pt','a4');
+                var doc = new jsPDF('p','mm',[297,210],pt','a4');
                // console.log(imageSrc);
                 var imgData;
                 for (var i=0; i<dataURLArr.length; i++) {
