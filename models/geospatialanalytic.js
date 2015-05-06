@@ -6,6 +6,7 @@ var Geospatialanalytic = new keystone.List('Geospatialanalytic', {
 });
 
 Geospatialanalytic.add({
+	image:{ type: Types.CloudinaryImage},
 	text:{type:String},
 	subText:{type:String}, 
 	shortString:{type:String},
