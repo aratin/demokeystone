@@ -47,4 +47,5 @@ require('./geospatialanalytic');
 require('./informationreportingstrategy');
 require('./socialmediaanalyse');
 require('./footermenunavigation');
+require('./allnewes');
 

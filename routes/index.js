@@ -98,6 +98,7 @@ exports = module.exports = function(app) {
 	app.all('/social-media-analysis', routes.views.socialmediaanalyse);
 	app.all('/consultingservicesubmenu', routes.views.consultingservicesubmenu);
 	app.all('/footermenunavigation', routes.views.footermenunavigation);
+	app.all('/allnewes', routes.views.allnewes);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
