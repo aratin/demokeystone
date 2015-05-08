@@ -122,6 +122,16 @@ block content
                     | #{data.homepages[0].NewsAndUpdatesubstring}
                   p
               hr
+              .row
+                .col-md-2.col-sm-2
+                  if data.homepages.length
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
+                .col-md-10.col-sm-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
+                  p
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
               p
                 a.read-more(href="#") Read More &#62; &#62;
       .container-fluid
