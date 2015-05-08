@@ -28,16 +28,16 @@ block content
                 .col-md-8
                 small #{data.allnewess[0].date}
                   p
-                    | #{data.allnewess[0].news1}
+                    | #{data.allnewess[0].news}
                .row
                 .col-md-4
                  if data.allnewess.length
                       if data.allnewess[0].image1.exists
                         img(id="image1",src=data.allnewess[0]._.image1.limit(640,640))
                 .col-md-8
-                small #{data.allnewess[0].date}
+                small #{data.allnewess[0].date1}
                   p
-                    | #{data.allnewess[0].news2}
+                    | #{data.allnewess[0].news1}
 
                .row
                 .col-md-4
@@ -45,18 +45,18 @@ block content
                       if data.allnewess[0].image2.exists
                         img(id="image2",src=data.allnewess[0]._.image2.limit(640,640))
                 .col-md-8
-                small #{data.allnewess[0].date}
+                small #{data.allnewess[0].date2}
                   p
-                    | #{data.allnewess[0].news3}
+                    | #{data.allnewess[0].news2}
                .row
                 .col-md-4
                   if data.allnewess.length
                       if data.allnewess[0].image3.exists
                         img(id="image3",src=data.allnewess[0]._.image3.limit(640,640))
                 .col-md-8
-                small #{data.allnewess[0].date}
+                small #{data.allnewess[0].date3}
                   p
-                    | #{data.allnewess[0].news4}
+                    | #{data.allnewess[0].news3}
             include ../views/companyinfolistmenu
       .container-fluid
         .row
