@@ -18,14 +18,7 @@ exports = module.exports = function(req, res) {
 		
 	view.on('post', { action: 'contact' }, function(next) {
 		
-	var Email= new keystone.Email('enquiry-notification').send({
-    subject: 'New Enquiry from Yoga Australia Website',
-    to: 'arati.nankar@planetria.com',
-    fromName: 'arati nankar',
-    fromEmail: 'arati.nankar209@gmail.com',
-    // other locals for the email template also go here
-}, callback);
-		var application = new Contactlist.model(),
+		var application = new Enquiry.model(),
 			updater = application.getUpdateHandler(req);
 		
 		updater.process(req.body, {
