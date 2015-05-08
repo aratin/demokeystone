@@ -110,8 +110,8 @@ block content
                   p
                     | #{data.homepages[0].NewsAndUpdatesubstring}
                   p
-              hr
-              .row.content
+              hr.content
+              .row
                 .col-md-2.col-sm-2
                   if data.homepages.length
                       if data.homepages[0].NewsAndUpdateImage.exists
@@ -121,8 +121,8 @@ block content
                   p
                     | #{data.homepages[0].NewsAndUpdatesubstring}
                   p
-              hr
-              .row.content
+              hr.content
+              .row
                 .col-md-2.col-sm-2
                   if data.homepages.length
                       if data.homepages[0].NewsAndUpdateImage.exists
@@ -134,7 +134,7 @@ block content
                   p
               hr
               p
-                a.read-more(href="#") Read More &#62; &#62;
+                a.read-more.news(href="#") Read More &#62; &#62;
       .container-fluid
         .row
           footer
