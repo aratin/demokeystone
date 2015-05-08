@@ -110,30 +110,6 @@ block content
                   p
                     | #{data.homepages[0].NewsAndUpdatesubstring}
                   p
-
-              hr
-              div
-              .row.content
-                .col-md-2.col-sm-2
-                  if data.homepages.length
-                      if data.homepages[0].NewsAndUpdateImage.exists
-                        img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
-                .col-md-10.col-sm-10
-                  small #{data.homepages[0].NewsAndUpdateDate}
-                  p
-                    | #{data.homepages[0].NewsAndUpdatesubstring}
-                  p
-              hr
-              .row.content
-                .col-md-2.col-sm-2
-                  if data.homepages.length
-                      if data.homepages[0].NewsAndUpdateImage.exists
-                        img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
-                .col-md-10.col-sm-10
-                  small #{data.homepages[0].NewsAndUpdateDate}
-                  p
-                    | #{data.homepages[0].NewsAndUpdatesubstring}
-                  p
               hr
               div
                 p.heading Read More
@@ -154,14 +130,6 @@ block content
                     small #{data.homepages[0].NewsAndUpdateDate}
                     p
                       | #{data.homepages[0].NewsAndUpdatesubstring}
-
-                p.heading Header-3
-                .content
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit orem ipsum dolor sit amet, consectetuer adipiscing elit
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit orem ipsum dolor sit amet, consectetuer adipiscing elit
-
-              p
-                a.news Read More &#62; &#62;
       .container-fluid
         .row
           footer
