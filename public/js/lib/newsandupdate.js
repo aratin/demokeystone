@@ -1,8 +1,8 @@
-jQuery(document).ready(function() {
-  jQuery(".content").hide();
+$(document).ready(function() {
+  $(".content").hide();
   //toggle the componenet with class msg_body
-  jQuery(".news").click(function()
+  $(".news").click(function()
   {
-    jQuery(this).next(".content").slideToggle(500);
+    $(this).next(".content").slideToggle(500);
   });
 });
