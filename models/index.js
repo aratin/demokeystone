@@ -23,7 +23,6 @@ require('./msp');
 require('./specializedanalyse');
 require('./offering');
 require('./technologyresale');
-require('./contactlist');
 require('./analyticalportal');
 require('./tibcospotfire');
 require('./tibcospotfirecustom');

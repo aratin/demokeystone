@@ -73,7 +73,6 @@ exports = module.exports = function(app) {
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
 	app.all('/offering', routes.views.offering);
 	app.all('/technologyresale', routes.views.technologyresale);
-	app.all('/contactlist', routes.views.contactlist);
 	app.all('/analyticalportal', routes.views.analyticalportal);
 	app.all('/tibcospotfire', routes.views.tibcospotfire);
 	app.all('/marketresearch', routes.views.marketresearch);
