@@ -34,41 +34,7 @@ exports = module.exports = function(req, res) {
 		
 	});
 
-	// Load the current Navbar
-	view.on('init', function(next) {
-		var q = Navbar.model.find();
-		q.exec(function(err, results) {
-			locals.data.navbars = results;
-			next(err);
-		});
-	});
-
-	// Load the current MenuList
-	view.on('init', function(next) {
-		var q = MenuList.model.find();
-		q.exec(function(err, results) {
-   			locals.data.menus = results;
-			next(err);
-		});
-	});
-
-	// Load the current FooterList
-	view.on('init', function(next) {
-		var q = FooterList.model.find();
-		q.exec(function(err, results) {
-   			locals.data.footers = results;
-			next(err);
-		});
-	});
-
-	// Load the current CompanyInfoListMenu
-	view.on('init', function(next) {
-		var q = CompanyInfoListMenu.model.find();
-		q.exec(function(err, results) {
-			locals.data.companyinfolistmenus = results;
-			next(err);
-		});
-	});
+	
 
 	
 	view.render('contact', {
