@@ -59,7 +59,7 @@ exports = module.exports = function(app) {
 	// app.get('/blog/:category?', routes.views.blog);
 	// app.all('/blog/post/:post', routes.views.post);
 	// app.get('/gallery', routes.views.gallery);
-	// app.all('/contact', routes.views.contact);
+	app.all('/contact', routes.views.contact);
 	app.all('/company-profile', routes.views.companyprofile);
 	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
 	app.all('/mangementteam', routes.views.mangementteam);
@@ -73,7 +73,7 @@ exports = module.exports = function(app) {
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
 	app.all('/offering', routes.views.offering);
 	app.all('/technologyresale', routes.views.technologyresale);
-	app.all('/contactform', routes.views.contactform);
+	//app.all('/contactform', routes.views.contactform);
 	app.all('/analyticalportal', routes.views.analyticalportal);
 	app.all('/tibcospotfire', routes.views.tibcospotfire);
 	app.all('/marketresearch', routes.views.marketresearch);
