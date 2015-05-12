@@ -1,9 +1,5 @@
 var keystone = require('keystone'),
 	Enquiry = keystone.list('Enquiry');
-	Navbar = keystone.list('Navbar'),
-    MenuList = keystone.list('Menu'),
-	FooterList = keystone.list('Footer'),
-    CompanyInfoListMenu = keystone.list('CompanyInfoListMenu'),
 
 exports = module.exports = function(req, res) {
 	
@@ -33,9 +29,6 @@ exports = module.exports = function(req, res) {
 		});
 		
 	});
-
-	
-
 	
 	view.render('contact', {
 		section: 'contact',

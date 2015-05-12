@@ -7,59 +7,33 @@ block content
       #inner-banner
       #inner-content-box#content-box
         .container
-          #offerings
-            .col-md-9.text-right
-              ul.list-inline
-                li
-                  a(href="#",onclick="printFunction()")
-                    i.fa.fa-lg.fa-print
-                li
-                  a#pdf
-                    i.fa.fa-lg.fa-file-pdf-o
-                li
-                  a(href="#")
-                    i.fa.fa-lg.fa-envelope
-            .col-md-9#content-data
+          #offerings.row
+            .col-md-9
               .row
                 .col-md-4
                   if data.allnewess.length
                       if data.allnewess[0].image.exists
-                        img(id="image",src=data.allnewess[0]._.image.limit(640,640))
+                        img(src=data.allnewess[0]._.image.limit(640,640))
                 .col-md-8
-                small #{data.allnewess[0].date}
-                  p
-                    | #{data.allnewess[0].news}
-               .row
-                .col-md-4
-                 if data.allnewess.length
-                      if data.allnewess[0].image1.exists
-                        img(id="image1",src=data.allnewess[0]._.image1.limit(640,640))
-                .col-md-8
-                small #{data.allnewess[0].date1}
-                  p
-                    | #{data.allnewess[0].news1}
-
-               .row
-                .col-md-4
-                  if data.allnewess.length
-                      if data.allnewess[0].image2.exists
-                        img(id="image2",src=data.allnewess[0]._.image2.limit(640,640))
-                .col-md-8
-                small #{data.allnewess[0].date2}
-                  p
-                    | #{data.allnewess[0].news2}
-               .row
-                .col-md-4
-                  if data.allnewess.length
-                      if data.allnewess[0].image3.exists
-                        img(id="image3",src=data.allnewess[0]._.image3.limit(640,640))
-                .col-md-8
-                small #{data.allnewess[0].date3}
-                  p
-                    | #{data.allnewess[0].news3}
-            include ../views/companyinfolistmenu
+                  .row
+                    .col-md-4.col-md-offset-8.text-right
+                      ul.list-inline
+                        li
+                          a#print
+                            i.fa.fa-lg.fa-print
+                          |
+                        li
+                          a#pdf
+                            i.fa.fa-lg.fa-file-pdf-o
+                          |
+                        li
+                          a(href="/contactlist")
+                            i.fa.fa-lg.fa-envelope
+                  small #{data.allnewess[0].date}
+                    p
+                      | #{data.allnewess[0].newsText}
+                  
       .container-fluid
         .row
           footer
             include ../views/footer
-            
