@@ -1,5 +1,6 @@
 var _ = require('underscore'),
 	keystone = require('keystone'),
+	middleware = require('./middleware'),
 	importRoutes = keystone.importer(__dirname);
 
 function restrictToAdmins(req, res, next) {
@@ -59,7 +60,7 @@ exports = module.exports = function(app) {
 	// app.get('/blog/:category?', routes.views.blog);
 	// app.all('/blog/post/:post', routes.views.post);
 	// app.get('/gallery', routes.views.gallery);
-	// app.all('/contact', routes.views.contact);
+	app.all('/contact', routes.views.contact);
 	app.all('/company-profile', routes.views.companyprofile);
 	app.get('/companyinfolistmenu',routes.views.companyinfolistmenu);
 	app.all('/mangementteam', routes.views.mangementteam);
@@ -73,7 +74,6 @@ exports = module.exports = function(app) {
 	app.get('/specializedanalyse',routes.views.specializedanalyse);
 	app.all('/offering', routes.views.offering);
 	app.all('/technologyresale', routes.views.technologyresale);
-	app.all('/contactform', routes.views.contactform);
 	app.all('/analyticalportal', routes.views.analyticalportal);
 	app.all('/tibcospotfire', routes.views.tibcospotfire);
 	app.all('/marketresearch', routes.views.marketresearch);
@@ -88,7 +88,7 @@ exports = module.exports = function(app) {
 	app.all('/crm', routes.views.crm);
 	app.all('/lawenforcement', routes.views.lawenforcement);
 	app.all('/data-warehouse', routes.views.datawarehouse);
-	app.all('/business-intelligence', routes.views.businessintelligence);
+	app.all('/visualbusinessintelligence', routes.views.visualbusinessintelligence);
 	app.all('/predictive-modeling', routes.views.predictivemodeling);
 	app.all('/business-process-strategy', routes.views.businessprocessstrategy);
 	app.all('/comparative-benchmarking', routes.views.comparativebenchmarking);
@@ -96,12 +96,19 @@ exports = module.exports = function(app) {
 	app.all('/geo-spatial-analytic', routes.views.geospatialanalytic);
 	app.all('/information-reporting-strategy', routes.views.informationreportingstrategy);
 	app.all('/social-media-analysis', routes.views.socialmediaanalyse);
-	app.all('/consultingservicesubmenu', routes.views.consultingservicesubmenu);
 	app.all('/footermenunavigation', routes.views.footermenunavigation);
 	app.all('/allnewes', routes.views.allnewes);
+	app.all('/contact', routes.views.contact);	
+	app.all('/pdfFile', routes.views.pdfFile);
+	app.all('/news1', routes.views.news1);
+	app.all('/news2', routes.views.news2);
+	app.all('/news3', routes.views.news3);
+	app.all('/news4', routes.views.news4);
+	app.all('/whatweoffersnavigation', routes.views.whatweoffersnavigation);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
+
 	
 	// API
 	//app.all('/api*', keystone.initAPI);

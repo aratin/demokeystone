@@ -8,6 +8,7 @@ var Readmore = new keystone.List('Readmore', {
 Readmore.add({
 	image:{ type: Types.CloudinaryImage},
 	longText: { type: String },
+	heading:{type:String},
 	
 });
 

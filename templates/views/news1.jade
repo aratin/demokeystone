@@ -20,14 +20,16 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
-              h2 #{data.readmores[0].heading}
               .row
                 .col-md-4
-                  if data.readmores.length
-                        img(id="image",src=data.readmores[0]._.image.limit(640,640))
+                  if data.news1s.length
+                      if data.news1s[0].image.exists
+                        img(id="image",src=data.news1s[0]._.image.limit())
                 .col-md-8
+                  h3 News1:-
+                small #{data.news1s[0].date}
                   p
-                    | #{data.readmores[0].longText}
+                    | #{data.news1s[0].news1}
             include ../views/companyinfolistmenu
       .container-fluid
         .row
