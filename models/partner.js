@@ -10,7 +10,6 @@ Partner.add({
 	partnertext: {type: String},
 	partnersubimage: {type: String},
 	partnersubtext: {type: String},
-	heading:{type:String},
 });
 
 /** 

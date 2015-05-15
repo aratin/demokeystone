@@ -13,7 +13,6 @@ Socialmediaanalyse.add({
 	longString:{type:String},
 	subString:{type:String},
 	subStringText:{type:String},
-	heading:{type:String},
 	
 });
 

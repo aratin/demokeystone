@@ -31,12 +31,9 @@ Homepage.add({
 	Aboutusstring: { type: String, required: true },
 	Aboutustextarea: { type: Types.Textarea, initial: true },
 	NewsAndUpdatetitle:{type: String},
-	image:{ type: Types.CloudinaryImage},
-	date:{type: Date},
-	news1:{type: String},
-	image1:{ type: Types.CloudinaryImage},
-	date:{type: Date},
-	news2:{type: String},
+	NewsAndUpdateImage:{ type: Types.CloudinaryImage},
+	NewsAndUpdateDate:{type: Date},
+	NewsAndUpdatesubstring:{type: String}
 });
 
 /** 

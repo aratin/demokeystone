@@ -12,7 +12,6 @@ Crm.add({
 	subText: { type: Types.Html },
 	shortString: { type: Types.Html },
 	shortText: { type: Types.Html },
-	heading:{type:String},
 });
 
 /** 

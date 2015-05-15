@@ -9,7 +9,6 @@ SoftwareProduct.add({
 	softwareProducts:{type:String},
 	softwareProductsImages:{ type: Types.CloudinaryImage,publicID: 'slug'},
 	softwareProucttext: { type: Types.Textarea, initial: true },
-	heading:{type:String},
 });
 
 /** 

@@ -66,13 +66,14 @@ keystone.set('cloudinary folders', true);
 // optional, will force cloudinary to serve images over https
 keystone.set('cloudinary secure', true);
 
-//keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
-//keystone.set('mandrill username', 'arati.nankar@planetria.com');
+keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
+keystone.set('mandrill username', 'arati.nankar@planetria.com');
 
 keystone.set('nav', {
 	'homepages': 'homepages',
 	'companyprofiles': 'companyprofiles',
 	'offerings': 'offerings',
+	'contactlists': 'contactlists',
 	'navbars': 'navbars',
 	'menus': 'menus',
 	'footers': 'footers'

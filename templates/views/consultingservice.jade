@@ -20,7 +20,6 @@ block content
                   a(href="/contactform")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
-              h2 #{data.consultingservices[0].heading}
               .row
                 .col-md-4
                   if data.consultingservices.length
@@ -29,7 +28,6 @@ block content
                 .col-md-8
                   p
                     | #{data.consultingservices[0].consultingServicetext}
-            .expand
             include ../views/listingmenu
       .container-fluid
         .row

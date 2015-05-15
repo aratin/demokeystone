@@ -1,6 +1,6 @@
 extends ../layouts/default
+//-extends /views/navbar
 block content
-  body:.wrapper
     header
       include ../views/navbar
       include ../views/menu
@@ -89,32 +89,30 @@ block content
                 a.read-more(href="/readmore") Read More &#62; &#62;
             .col-md-6
               h2 #{data.homepages[0].NewsAndUpdatetitle}
-              a.news-row(href="/news1")
-                .col-md-4.col-sm-4.new-update-container
+              .row
+                .col-md-2.col-sm-2
                   if data.homepages.length
-                        img(id="image",src=data.homepages[0]._.image.limit())
-               
-                .col-md-8.col-sm-8.nopadding.new-container
-                  h3 News1:-
-                  small #{data.homepages[0].date}
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
+                .col-md-10.col-sm-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
                   p
-                    | #{data.homepages[0].news1}
-                  hr
-                    |              
-              a.row(href="/news2")
-                .col-md-4.col-sm-4.new-update-container
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              .row
+                .col-md-2.col-sm-2
                   if data.homepages.length
-                        img(id="image",src=data.homepages[0]._.image1.limit())
-                .col-md-8.col-sm-8.nopadding.new-container
-                  h3 News2:-
-                  small #{data.homepages[0].date}
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        img(src=data.homepages[0]._.NewsAndUpdateImage.limit(80,52))
+                .col-md-10.col-sm-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
                   p
-                    | #{data.homepages[0].news2}
-                  hr
-                    |           
-              div.pull-right
-                a(href="/allnewes")
-                  | Read More                
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              p
+                a.read-more(href="#") Read More &#62; &#62;
       .container-fluid
         .row
           footer

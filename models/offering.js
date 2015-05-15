@@ -7,7 +7,6 @@ var Offering = new keystone.List('Offering', {
 
 Offering.add({
 	offeringImage:{type: Types.CloudinaryImage},
-	heading:{type:String},
 });
 
 /** 

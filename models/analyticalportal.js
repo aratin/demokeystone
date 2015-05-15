@@ -8,7 +8,7 @@ var Analyticalportal = new keystone.List('Analyticalportal', {
 Analyticalportal.add({
 	image: { type: Types.CloudinaryImage},
 	longText: { type: String },
-	heading:{type:String},
+	
 });
 
 /** 

@@ -39,7 +39,7 @@ $(document).ready(function(){
         for (var i=0; i< imageArr.length; i++) {
             convertImgToBase64(imageArr[i], i); // pass index of current element
         }            
-            createPdf();
+            //createPdf();
             //console.log(dataURLArr[i] + "" + "" + "num" + i);
                
         
@@ -76,13 +76,11 @@ $(document).ready(function(){
                 //doc.setFontSize(14);
                // console.log(imageSrc);
                 var imgData;
-                 for (var i=0; i<dataURLArr.length; i++) {
+                for (var i=0; i<dataURLArr.length; i++) {
                     imgData = dataURLArr[i];
-                   //  doc.addImage(imgData, 'JPEG', 15, 60*(i+1), 40,80);
-                }                
-                var me = $('#content-data').html();                
-                var data = me.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace("’","'");
-                doc.fromHTML(data, 80,30,  {
+                   doc.addImage(imgData, 'JPEG', 15, 60*(i+1), 50, 40);
+                }   
+                doc.fromHTML($('#content-data').html(), 80,30,  {
                     'width': 450,'elementHandlers': specialElementHandlers
                 });
                 doc.save('sample-file.pdf');

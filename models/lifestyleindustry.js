@@ -8,7 +8,7 @@ var Lifestyleindustry = new keystone.List('Lifestyleindustry', {
 Lifestyleindustry.add({
 	
 	image:{ type: Types.CloudinaryImage},
-	heading:{type:String},
+	text: { type: String }
 });
 
 /** 

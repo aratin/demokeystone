@@ -20,7 +20,6 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
-              h2 #{data.marketresearchs[0].heading}
               .row
                 .col-md-4
                   if data.marketresearchs.length
@@ -29,7 +28,7 @@ block content
                 .col-md-8
                   p
                     | #{data.marketresearchs[0].longText}
-            include ../views/whatweoffersnavigation
+            include ../views/companyinfolistmenu
       .container-fluid
         .row
           footer

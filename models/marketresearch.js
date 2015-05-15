@@ -8,7 +8,6 @@ var Marketresearch = new keystone.List('Marketresearch', {
 Marketresearch.add({
 	image: { type: Types.CloudinaryImage},
 	longText: { type: String },
-	heading:{type:String},
 	
 });
 
