@@ -1,10 +1,9 @@
 var keystone = require('keystone');
-var Tibcospotfire = keystone.list('Tibcospotfire');
+var Visualbusinessintelligence = keystone.list('Visualbusinessintelligence');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-var Whatweoffersnavigation = keystone.list('Whatweoffersnavigation');
-//var Message = keystone.list('Message');
+var Listingmenu = keystone.list('Listingmenu');
 
 
 exports = module.exports = function(req, res) {
@@ -12,14 +11,14 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	// Init locals
-		locals.section = 'tibcospotfire';
+		locals.section = 'visualbusinessintelligence';
 		locals.data = [];
 
-	// Load the current Analyticalportal
+	// Load the current Visualbusinessintelligence
 	view.on('init', function(next) {
-		var q = Tibcospotfire.model.find();
+		var q = Visualbusinessintelligence.model.find();
 		q.exec(function(err, results) {
-			locals.data.tibcospotfires = results;
+			locals.data.visualbusinessintelligences = results;
 			next(err);
 		});
 	});
@@ -51,15 +50,15 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current Whatweoffersnavigation
+		// Load the current ListingMenu
 	view.on('init', function(next) {
-		var q = Whatweoffersnavigation.model.find();
+		var q = Listingmenu.model.find();
 		q.exec(function(err, results) {
-			locals.data.whatweoffersnavigations = results;
+			locals.data.listingmenus = results;
 			next(err);
 		});
 	});
 	
 	// Render the view
-	view.render('tibcospotfire');
+	view.render('visualbusinessintelligence');
 }

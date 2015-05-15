@@ -1,9 +1,8 @@
 var keystone = require('keystone');
-var Tibcospotfire = keystone.list('Tibcospotfire');
+var Whatweoffersnavigation = keystone.list('Whatweoffersnavigation');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-var Whatweoffersnavigation = keystone.list('Whatweoffersnavigation');
 //var Message = keystone.list('Message');
 
 
@@ -12,14 +11,14 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 
 	// Init locals
-		locals.section = 'tibcospotfire';
+		locals.section = 'whatweoffersnavigation';
 		locals.data = [];
 
-	// Load the current Analyticalportal
+	// Load the current Whatweoffersnavigation
 	view.on('init', function(next) {
-		var q = Tibcospotfire.model.find();
+		var q = Whatweoffersnavigation.model.find();
 		q.exec(function(err, results) {
-			locals.data.tibcospotfires = results;
+			locals.data.whatweoffersnavigations = results;
 			next(err);
 		});
 	});
@@ -50,16 +49,7 @@ exports = module.exports = function(req, res) {
 			next(err);
 		});
 	});
-
-	// Load the current Whatweoffersnavigation
-	view.on('init', function(next) {
-		var q = Whatweoffersnavigation.model.find();
-		q.exec(function(err, results) {
-			locals.data.whatweoffersnavigations = results;
-			next(err);
-		});
-	});
 	
 	// Render the view
-	view.render('tibcospotfire');
+	view.render('whatweoffersnavigation');
 }

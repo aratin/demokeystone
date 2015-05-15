@@ -4,7 +4,7 @@ var Tibcospotfirecustom = keystone.list('Tibcospotfirecustom');
 var Navbar = keystone.list('Navbar');
 var MenuList = keystone.list('Menu');
 var FooterList = keystone.list('Footer');
-var CompanyInfoListMenu = keystone.list('CompanyInfoListMenu');
+var Whatweoffersnavigation = keystone.list('Whatweoffersnavigation');
 //var Message = keystone.list('Message');
 
 
@@ -52,23 +52,15 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Load the current CompanyInfoListMenu
+	// Load the current Whatweoffersnavigation
 	view.on('init', function(next) {
-		var q = CompanyInfoListMenu.model.find();
+		var q = Whatweoffersnavigation.model.find();
 		q.exec(function(err, results) {
-			locals.data.companyinfolistmenus = results;
+			locals.data.whatweoffersnavigations = results;
 			next(err);
 		});
 	});
 
-	// Load the current Message
-	// view.on('init', function(next) {
-	// 	var q = Message.model.find();
-	// 	q.exec(function(err, results) {
-	// 		locals.data.messages = results;
-	// 		next(err);
-	// 	});
-	// });
 	
 	// Render the view
 	view.render('tibcospotfirecustom');
