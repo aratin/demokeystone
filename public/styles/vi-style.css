@@ -13,6 +13,8 @@ small { font-size: 12px; display: block; vertical-align: top; color: #666; margi
 input.form-control, textarea.form-control {width: 50%;}
 #offerings form label {margin: 10px 0;}
 .col-md-4 > img {width: 100%;}
+#offerings .offer-listing ul li ul{padding-left: 15px;}
+#offerings .offer-listing ul li ul li{border-bottom: none;}
 /*****************************************************************************************/
 
 /**************************************** Navigation Bar *****************************************/
@@ -48,6 +50,11 @@ input.form-control, textarea.form-control {width: 50%;}
 #content-box {padding: 25px 0 45px;}
 #content-box  p { font-size: 14px; color: #666; line-height: 22px; margin-bottom:0;}
 #content-box .read-more { color: #010101; font-weight: 600; line-height: 33px; }
+#content-box .heading1 {margin: 1px; color: #010101; padding: 3px 10px; cursor: pointer; position: relative; background-color:#c30;}
+#content-box .content { padding:0;}
+#content-box .nopadding {padding: 0 !important;margin: 0 !important;}
+#content-box .news-row{margin-left: -15px; margin-right: -15px;}
+#content-box  p1 { padding: 5px 0; }
 #content-box .offer-box { width: 100%; height: auto; background-color: #ebe7e7; border-bottom: 7px solid #7bcc3d; text-align: center; color: #0093d6; padding: 50px 12px 38px; margin-bottom: 35px; position: relative;}
 #content-box .offer-box span { text-transform: uppercase; font-family: 'Raleway', sans-serif; font-weight: 600; line-height: 26px; font-size: 16px;}
 #content-box .offer-box .icon-border { width: 97px; height: 97px; border-radius: 50px; -webkit-border-radius: 50px; -o-border-radius:50px; -moz-border-radius: 50px; margin: 0 auto 38px auto; border: 1px solid #0093d6; padding: 5px; }
@@ -59,7 +66,8 @@ input.form-control, textarea.form-control {width: 50%;}
 #content-box .offer-box .black-hover-box h4 { font-size: 16px; line-height: 24px; margin-bottom: 15px; font-family: 'Raleway', sans-serif; font-weight: 600;margin-top: 0;}
 #content-box .offer-box .black-hover-box p { font-size: 12px; line-height: 16px; color: #fff; font-family: 'Raleway', sans-serif; margin-bottom: 15px; }
 #content-box .offer-box .black-hover-box .btn-info { background-image: none; background-color: #0093d6; border-radius: 0; border: none; text-transform: uppercase; font-weight: bold; box-shadow: none; -webkit-box-shadow: none;}
-
+#content-box .new-update-container img{ width: 100%;}
+#content-box .new-container h3{ margin-top: 0}
 /*****************************************************************************************/
 
 /**************************************** Footer Box *****************************************/
@@ -74,6 +82,7 @@ input.form-control, textarea.form-control {width: 50%;}
 #footer-box .footer-menu ul li {display: block; font-size: 14px; list-style: none; line-height: 26px; }
 #footer-box .footer-menu ul li a { color: #a3b1bf;}
 #footer-box .social-icon { padding:0 0 0 10px; position: relative; top: 0;}
+#footer-box a {color: #a3b1bf;}
 
 #copyright-box { background-color: #24272c; text-align: center; color: #fff; }
 #copyright-box a:focus, #copyright-box a:hover{text-decoration: none;}
