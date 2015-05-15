@@ -27,14 +27,12 @@ keystone.init({
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET || 'Visual Intelligence',
 	
-	'mandrill api key': process.env.MANDRILL_API_KEY || 'pyf4snChZI5bxR-6D1bg4g',
+	'ga property': process.env.GA_PROPERTY,
+	'ga domain': process.env.GA_DOMAIN,
 	
-	//'ga property': process.env.GA_PROPERTY,
-	//'ga domain': process.env.GA_DOMAIN,
+	'chartbeat property': process.env.CHARTBEAT_PROPERTY,
+	'chartbeat domain': process.env.CHARTBEAT_DOMAIN
 	
-	//'chartbeat property': process.env.CHARTBEAT_PROPERTY,
-	//'chartbeat domain': process.env.CHARTBEAT_DOMAIN
-
 });
 
 require('./models');
@@ -68,10 +66,8 @@ keystone.set('cloudinary folders', true);
 // optional, will force cloudinary to serve images over https
 keystone.set('cloudinary secure', true);
 
-//keystone.set('mandrill api key', 'pyf4snChZI5bxR-6D1bg4g');
-//keystone.set('mandrill username', 'varsha.gawali@planetria.com');
-//keystone.set('emailtemplate', 'templates/views/contactlist.jade');
-
+//keystone.set('mandrill api key', '_nmfkAwalFdbxh_1dgarHQ');
+//keystone.set('mandrill username', 'arati.nankar@planetria.com');
 
 keystone.set('nav', {
 	'homepages': 'homepages',
@@ -81,29 +77,5 @@ keystone.set('nav', {
 	'menus': 'menus',
 	'footers': 'footers'
 });
-keystone.set('email locals', {
-	logo_src: '/images/logo-email.gif',
-	logo_width: 194,
-	logo_height: 76,
-	theme: {
-		email_bg: '#f9f9f9',
-		link_color: '#2697de',
-		buttons: {
-			color: '#fff',
-			background_color: '#2697de',
-			border_color: '#1a7cb7'
-		}
-	}
-});
-
-keystone.set('email rules', [{
-	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/images/' : 'http://localhost:3000/images/'
-}, {
-	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/keystone/' : 'http://localhost:3000/keystone/'
-}]);
-
-keystone.set('email tests', require('./routes/emails'));
 
 keystone.start();
