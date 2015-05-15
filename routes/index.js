@@ -99,6 +99,10 @@ exports = module.exports = function(app) {
 	app.all('/consultingservicesubmenu', routes.views.consultingservicesubmenu);
 	app.all('/footermenunavigation', routes.views.footermenunavigation);
 	app.all('/allnewes', routes.views.allnewes);
+	app.all('/news1', routes.views.news1);
+	app.all('/news2', routes.views.news2);
+	app.all('/news3', routes.views.news3);
+	app.all('/news4', routes.views.news4);
 	
 	// Downloads
 	app.get('/download/users', routes.download.users);
