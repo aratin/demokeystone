@@ -48,4 +48,8 @@ require('./informationreportingstrategy');
 require('./socialmediaanalyse');
 require('./footermenunavigation');
 require('./allnewes');
+require('./news1');
+require('./news2');
+require('./news3');
+require('./news4');
 
