@@ -8,7 +8,8 @@ var TechnologyResale = new keystone.List('TechnologyResale', {
 TechnologyResale.add({
 	technologyResale:{type:String},
 	technologyResaleimage: { type: Types.CloudinaryImage},
-	technologyResaletext: { type: Types.Textarea, initial: true }
+	technologyResaletext: { type: Types.Textarea, initial: true },
+	heading:{type:String},
 });
 
 /** 

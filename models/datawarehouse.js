@@ -11,6 +11,7 @@ Datawarehouse.add({
 	subText:{ type: Types.Textarea, initial: true },
 	shortText:{ type: Types.Textarea, initial: true },
 	shortString:{ type: Types.Textarea, initial: true },
+	heading:{type:String},
 
 });
 

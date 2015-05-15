@@ -11,6 +11,7 @@ Geospatialanalytic.add({
 	subText:{type:String}, 
 	shortString:{type:String},
 	longString:{type:String},
+	heading:{type:String},
 	
 });
 

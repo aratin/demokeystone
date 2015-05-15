@@ -8,6 +8,7 @@ var Tibcospotfire = new keystone.List('Tibcospotfire', {
 Tibcospotfire.add({
 	image: { type: Types.CloudinaryImage},
 	longText: { type: String },
+	heading:{type:String},
 	
 });
 

@@ -12,7 +12,8 @@ Career.add({
 	careerSubstring: { type: String },
 	careerShorttext: { type: String },
 	careerShortstring: { type: String },
-	careerEmail:{type: Types.Email}
+	careerEmail:{type: Types.Email},
+	heading:{type:String},
 });
 
 /** 

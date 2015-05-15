@@ -14,7 +14,8 @@ Msp.add({
 	consulting: {type: String},
 	msp: {type: String},
 	specialiseAnyalise: {type: String},
-	technologyResale: {type: String}
+	technologyResale: {type: String},
+	heading:{type:String},
 });
 
 /** 

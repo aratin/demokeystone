@@ -11,7 +11,7 @@ Lawenforcement.add({
 	shortText: {type:String },
 	longText: {type: Types.Textarea, initial: true },
 	subImage: {type:Types.CloudinaryImage},
-	
+	heading:{type:String},
 	
 });
 

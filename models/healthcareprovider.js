@@ -13,6 +13,7 @@ Healthcareprovider.add({
 	shortText: { type: String },
 	subString: { type: String },
 	shortString: { type: String },
+	heading:{type:String},
 });
 
 /** 

@@ -12,6 +12,7 @@ Comparativebenchmarking.add({
 	shortString:{type:String},
 	longString:{type:String},
 	subString:{type:String},
+	heading:{type:String},
 	
 });
 

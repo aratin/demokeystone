@@ -9,6 +9,7 @@ Employer.add({
 	
 	image:{ type: Types.CloudinaryImage},
 	longText: { type: Types.Textarea, initial: true },
+	heading:{type:String},
 });
 
 /** 

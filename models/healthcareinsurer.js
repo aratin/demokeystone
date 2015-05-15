@@ -10,6 +10,7 @@ Healthcareinsurer.add({
 	image:{ type: Types.CloudinaryImage},
 	longText: { type: Types.Textarea, initial: true },
 	longString: { type: Types.Textarea, initial: true },
+	heading:{type:String},
 });
 
 /** 

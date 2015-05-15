@@ -10,7 +10,8 @@ MangementTeam.add({
 	mangementTeamtext: { type: String },
 	mangementTeamsubtext: { type: String },
 	mangementTeamshortstring: { type: Types.Textarea, initial: true },
-	mangementTeamlongstring: { type: String }
+	mangementTeamlongstring: { type: String },
+	heading:{type:String},
 });
 
 /** 

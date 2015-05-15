@@ -9,6 +9,7 @@ Consultingservice.add({
 	consultingService:{type:String},
 	consultingServiceimage:{ type: Types.CloudinaryImage},
 	consultingServicetext:{ type: Types.Textarea, initial: true },
+	heading:{type:String},
 });
 
 /** 

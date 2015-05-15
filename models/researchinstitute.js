@@ -10,7 +10,8 @@ Researchinstitute.add({
 	image:{ type: Types.CloudinaryImage},
 	text: { type: String },
 	subText: { type: String },
-	shortText: { type: String }
+	shortText: { type: String },
+	heading:{type:String},
 	
 });
 

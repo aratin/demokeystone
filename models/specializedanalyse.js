@@ -9,6 +9,7 @@ SpecializedAnalyse.add({
 	specialiseAnyalise:{type:String},
 	specialiseimage: {type: Types.CloudinaryImage},
 	specialiseAnyalisetext: { type: Types.Textarea, initial: true },
+	heading:{type:String},
 });
 
 /** 

@@ -8,7 +8,7 @@ var Businessprocessstrategy = new keystone.List('Businessprocessstrategy', {
 Businessprocessstrategy.add({
 	image:{ type: Types.CloudinaryImage},
 	longText:{ type: String },
-	
+	heading:{type:String},
 });
 
 /** 
