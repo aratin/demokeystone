@@ -20,6 +20,7 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
+              h2 #{data.predictivemodelings[0].heading}
               .row
                 .col-md-4
                   if data.predictivemodelings.length
@@ -32,6 +33,7 @@ block content
                     | #{data.predictivemodelings[0].subText}
                   p
                     | #{data.predictivemodelings[0].shortString}
+            .expand
             include ../views/listingmenu
       .container-fluid
         .row

@@ -20,6 +20,7 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
+              h2 #{data.comparativebenchmarkings[0].heading}
               .row
                 .col-md-4
                   if data.comparativebenchmarkings.length
@@ -40,6 +41,7 @@ block content
                       br
                     p
                       | #{data.comparativebenchmarkings[0].subString}
+            .expand
             include ../views/listingmenu
       .container-fluid 
         .row

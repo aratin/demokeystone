@@ -20,6 +20,7 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
+              h2 #{data.geospatialanalytics[0].heading}
               .row
                 .col-md-4
                   if data.geospatialanalytics.length
@@ -37,6 +38,7 @@ block content
                     br
                   p
                     | #{data.geospatialanalytics[0].longString}
+            .expand
             include ../views/listingmenu
       .container-fluid
         .row

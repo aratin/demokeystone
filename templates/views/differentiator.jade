@@ -20,6 +20,7 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
+              h2 #{data.differentiators[0].heading}
               .row
                 .col-md-4
                   if data.differentiators.length
@@ -45,10 +46,10 @@ block content
                       if data.differentiators[0].differentiatorSubStringImage.exists
                         img(id="image2",src=data.differentiators[0]._.differentiatorSubStringImage.limit(640,640))
                 .col-md-8
-                  p
+                  h1
                     | #{data.differentiators[0].differentiatorShortStringText}
-                    br
-                    | #{data.differentiators[0].differentiatorLongStringText}
+                  P
+                   | #{data.differentiators[0].differentiatorLongStringText}
                .row
                 .col-md-4
                   if data.differentiators.length
@@ -57,6 +58,8 @@ block content
                 .col-md-8
                   p
                     | #{data.differentiators[0].differentiatorTextLong}
+                  div
+                    .someClass                    
             include ../views/companyinfolistmenu
       .container-fluid
         .row

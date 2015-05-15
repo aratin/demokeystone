@@ -17,22 +17,27 @@ block content
                   a#pdf
                     i.fa.fa-lg.fa-file-pdf-o
                 li
-                  a(href="/contactform")
+                  a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
-              h2 #{data.consultingservices[0].heading}
+              h2 #{data.visualbusinessintelligences[0].heading}
               .row
                 .col-md-4
-                  if data.consultingservices.length
-                      if data.consultingservices[0].consultingServiceimage.exists
-                        img(id="image",src=data.consultingservices[0]._.consultingServiceimage.limit(640,640))
+                  if data.visualbusinessintelligences.length
+                      if data.visualbusinessintelligences[0].image.exists
+                        img(id="image",src=data.visualbusinessintelligences[0]._.image.limit())
                 .col-md-8
                   p
-                    | #{data.consultingservices[0].consultingServicetext}
-            .expand
+                    | #{data.visualbusinessintelligences[0].text}
+                  p
+                    | #{data.visualbusinessintelligences[0].subText}
+                  p
+                    | #{data.visualbusinessintelligences[0].shortString}
+                  p
+                    | #{data.visualbusinessintelligences[0].longString}
             include ../views/listingmenu
       .container-fluid
         .row
           footer
             include ../views/footer
-   
+            

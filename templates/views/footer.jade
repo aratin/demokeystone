@@ -1,4 +1,4 @@
-#footer-box
+#footer-box        
   .container
     .row
       //- Document List Begins
@@ -7,11 +7,14 @@
         .pdf-list
           ul
             li
-              img(src='#{data.footers[0].Pdfimage}')
-              a(href="/vi acceptable use policy") #{data.footers[0].visuallink}
+              img(src='#{data.footers[0].Pdfimage}')              
+              a(href="pdf/vi acceptable use policy.pdf")
+                | #{data.footers[0].visuallink}
             li
               img(src='#{data.footers[0].Pdfimage}')
-              a(href="/privacy policy") #{data.footers[0].visualsublink}
+              a(href="pdf/privacy policy.pdf")                 
+                 | #{data.footers[0].visualsublink}
+      //- attach download = "name" in a(href="URL of pdf file" download="dummy name.pdf") to be able to download the pdf 
       //- Document List Ends
       //- Footer Menu Begins
       .col-md-4.col-sm-4
@@ -46,13 +49,17 @@
         p #{data.footers[0].VisualIntelligencefooter}
         p
         p #{data.footers[0].footeraddress}
-        p Email: #{data.footers[0].footeremail}
+        p            
+          a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank")
+            | Email: #{data.footers[0].footeremail}
+        
         p
           | #{data.footers[0].FollowUs} :
-          a(href="#")
+          a(href="http://www.facebook.com/pages/Visual-Intelligence-LLC/125899284140778", target="_blank")
             img.social-icon(src='#{data.footers[0].facebookimage}')
-          a(href="#")
+          a(href="http://www.linkedin.com/company/visual-intelligence-llc?goback=%2Enpe_*1_*1_*1_*1%2Enpe_*1_en*4US_*1_*1" ,target="_blank")
             img.social-icon(src='#{data.footers[0].linkdinimage}')
+      
       //- Contact Ends
 //- Copyright Begins
 #copyright-box

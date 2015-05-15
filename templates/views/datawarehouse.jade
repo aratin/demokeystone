@@ -20,6 +20,7 @@ block content
                   a(href="#")
                     i.fa.fa-lg.fa-envelope
             .col-md-9#content-data
+              h2 #{data.datawarehouses[0].heading}
               .row
                 .col-md-4
                   if data.datawarehouses.length
@@ -34,6 +35,7 @@ block content
                     | #{data.datawarehouses[0].shortText}
                   p
                     | #{data.datawarehouses[0].shortString}
+            .expand
             include ../views/listingmenu
       .container-fluid
         .row
